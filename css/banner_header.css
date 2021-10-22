@@ -1,0 +1,338 @@
+
+/* div.all_div */
+div.all_div{
+    width: 100%;
+}
+
+/* div.banner_div */
+div.banner_div{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* banner image 1,2,3 & banner image 1,2,3 animation */
+div.banner_div>img{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+}
+
+div.banner_div>img{
+    animation-name: banner_slider;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index: 0;
+}
+
+div.banner_div:hover>img{
+    animation-play-state: paused;
+}
+
+div.banner_div>img.banner_image2{
+    animation-delay: 0s;
+}
+
+div.banner_div>img.banner_image1{
+    animation-delay: 5s;
+}
+
+@keyframes banner_slider{
+    0%{
+        left: 100%;
+    }
+    10%{
+        left: 0;
+    }
+    50%{
+        left: 0;
+    }
+    60%{
+        left: -100%;
+    }
+    100%{
+        left: -100%;
+    }
+}
+
+/* logo */
+div.logo{
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    animation-name: bee_walking;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+}
+
+@keyframes bee_walking{
+    0%{
+        top: 0;
+        left: 0;
+        transform: rotate(0deg);
+    }
+    10%{
+        top: 30px;
+        left: 30px;
+        transform: rotate(90deg);
+    }
+    30%{
+        top: 60px;
+        left: 60px;
+        transform: rotate(45deg);
+    }
+    40%{
+        top: 60px;
+        left: 60px;
+        transform: rotate(30deg);
+    }
+    50%{
+        top: 30px;
+        left: 90px;
+        transform: rotate(-30deg);
+    }
+    60%{
+        top: 15px;
+        left: 100px;
+        transform: rotate(60deg);
+    }
+    80%{
+        top: 60px;
+        left: 150px;
+        transform: rotate(110deg);
+    }
+    100%{
+        top: 90px;
+        left: 200px;
+        transform: rotate(30deg);
+    }
+}
+
+div.logo:hover{
+    animation-play-state: paused;
+}
+
+/* header ul&li */
+ul.left_ul{
+    position: absolute;
+    left: 150px;
+    top: 60px;
+}
+
+ul.left_ul>li{
+    position: relative;
+    display: inline-block;  
+}
+
+ul.left_ul>li>a{
+    color: white;
+    font-size: 24px;
+    padding: 0 15px; 
+    text-decoration: none;
+}
+
+ul.left_ul>li:hover>a{
+    color: #d09661;
+    text-decoration: underline #d09661;
+}
+
+ul.left_ul>li>ul{
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    display: none;
+}
+
+ul.left_ul>li>ul>li{
+    opacity: 0.8;
+    background-color: #FCFAE3;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    list-style: none;
+}
+
+ul.left_ul>li:hover>ul{
+    display: block;
+}
+
+ul.left_ul>li>ul>li:hover{
+    cursor: pointer;
+    opacity: 1;
+    background-color: #FCFAE3;
+    font-size: 24px;
+    color: #d09661;
+}
+
+ul.right_ul{
+    position: absolute;
+    left: 750px;
+    top: 60px;
+}
+
+ul.right_ul>li{
+    position: relative;
+    display: inline-block;
+}
+
+ul.right_ul>li>a{
+    color: white;
+    font-size: 24px;
+    padding: 0 15px; 
+    text-decoration: none;
+}
+
+ul.right_ul>li>a:hover{
+    color: #d09661;
+    text-decoration: underline #d09661;
+}
+
+/* hambuger_list */
+div.hambuger_list{
+    position: absolute;
+    width: 100px;
+    height: 115px;
+    right: 10px;
+    opacity: 0.5;
+}
+
+div.hambuger_list:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+div.hambuger_list>div{
+    margin: 25px 0;
+    width: 100%;
+    height: 5px;
+    background-color: #d09661;
+}
+
+div.hambuger_list_hover{
+    animation-name: div_rotate;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    transform: rotate(180deg);
+}
+
+div.hambuger_list>div.rotate_1{
+    animation-name: line_1;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    transform: rotate(45deg) translate(20px, 20px);
+}
+
+div.hambuger_list>div.rotate_2{
+    display: none;
+}
+
+div.hambuger_list>div.rotate_3{
+    animation-name: line_3;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    transform: rotate(-45deg);
+}
+
+@keyframes line_1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(45deg) translate(20px, 20px);     
+    }
+}
+
+@keyframes line_3{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes div_rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+/* left_button&right_button */
+div.left_button,div.right_button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FCFAE3;
+    top: 50%;
+    opacity: 0.5;
+}
+
+div.left_button:hover,div.right_button:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+div.right_button{
+    right: 0px;
+}
+
+/* bottom_button */
+div.bottom_button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
+}
+
+div.bottom_button>div{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 5px;
+    animation-name: banner_bottom_button;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+div.bottom_button>div.left{
+    animation-delay: 0s;
+}
+
+div.bottom_button>div.right{
+    animation-delay: 5s;
+}
+
+@keyframes banner_bottom_button{
+    0%{
+        background-color: white;
+    }
+    10%{
+        background-color: #d09661;
+    }
+    50%{
+        background-color: #d09661;
+    }
+    60%{
+        background-color: white;
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+div.banner_div:hover>div.bottom_button>div{
+    animation-play-state: paused;
+}

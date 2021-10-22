@@ -1,0 +1,459 @@
+
+/* 返回上層按鈕 */
+div.return_to_top{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 5%;
+    z-index: 1;
+    /* display: none; */
+}
+
+@media screen and(min-height:1500px) {
+    div.return_to_top{
+        display: block;
+    }    
+}
+
+/* 推薦商品 */
+div.Recommended_products{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+    height: 393px;
+    overflow: hidden;
+}
+
+div.Recommended_products>div.Recommended_products_item{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #d09661;
+    margin-top: 10px;
+    width: 333px;
+    height: 380px;
+    background-color: #FCFAE3;
+    text-align: center;
+    box-shadow: 0 15px 10px 0 gray;
+}
+
+div.Recommended_products>div.Recommended_products_item>div.Recommended_products_price{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px 5px 5px 0;
+    background-color: #d09661;
+    top: 5%;
+    left: -3%;
+    color: white;
+}
+
+div.Recommended_products>div.Recommended_products_item>div.Recommended_products_price>p{
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+}
+
+div.Recommended_products>div.Recommended_products_item>div.Recommended_products_price>div{
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    width: 9.99px;
+    height: 20px;
+    background-color: #d09661;
+    border-radius: 0 0 0 10px;
+}
+
+div.Recommended_products>div.Recommended_products_item>div.Recommended_products_price>div>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0%;
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 15px 0 0 15px;
+}
+
+div.Recommended_products>div.Recommended_products_item>img{
+    width: 100%;
+    height: 200px;
+}
+
+div.Recommended_products>div.Recommended_products_item>h2{
+    text-align: center;
+    color: #d09661;
+}
+
+div.Recommended_products>div.Recommended_products_item>div.star{
+    text-align: center;
+}
+
+div.Recommended_products>div.Recommended_products_item>button.Recommended_products_button{
+    width: 196px;
+    height: 41px;
+    border-radius: 5px;
+    border: 1px solid #d09661;
+    text-align: center;
+    color: #d09661;
+    margin-top: 20px;
+    background-color: white;
+    background-image: url("../image/按鈕特效背景圖/d09661色碼背景圖.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -196px 0;
+}
+
+div.Recommended_products>div.Recommended_products_item>button.Recommended_products_button_hover{
+    cursor: pointer;
+    color: white;
+    background-position: 0;
+    animation-name: Recommended_products_button_hover;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes Recommended_products_button_hover{
+    0%{
+        background-position: -196px 0;
+        color: #d09661;
+    }
+    100%{
+        background-position: 0;
+        color: white;
+    }
+}
+
+/* 最新消息 */
+div.latest_new_card{
+    display: flex;
+    overflow: hidden;
+}
+
+div.latest_new_card>div.latest_new_item{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    height: 333px;
+    transition: 1s;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.latest_new_card>div.latest_new_item:hover{
+    cursor: pointer;
+}
+
+div.latest_new_card>div.latest_new_item_open{
+    flex: 2;
+}
+
+div.latest_new_card>div.latest_new_item_closed{
+    opacity: 0.5;
+}
+
+div.latest_new_card>div.latest_new_item:nth-child(1){
+    background-image: url("../image/消息圖片/pexels-anthony-shkraba-6187540.jpg");
+}
+
+div.latest_new_card>div.latest_new_item:nth-child(2){
+    background-image: url("../image/消息圖片/soap-bubble-1910494_1920.jpg");
+}
+
+div.latest_new_card>div.latest_new_item:nth-child(3){
+    background-image: url("../image/消息圖片/pexels-karolina-grabowska-4210314.jpg");
+}
+
+div.latest_new_card>div.latest_new_item:nth-child(4){
+    background-image: url("../image/消息圖片/pexels-karolina-grabowska-4210371.jpg");
+}
+
+div.latest_new_card>div.latest_new_item:nth-child(5){
+    background-image: url("../image/消息圖片/pexels-visual-stories-__-micheile-7032143.jpg");
+}
+
+div.latest_new_card>div.latest_new_item>p{
+    flex: 1;
+    text-align: center;
+    line-height: 63px;
+    font-size: 24px;
+    color: white;
+}
+
+div.latest_new_card>div.latest_new_item>p:first-child{
+    transform: translateY(-150%);
+}
+
+div.latest_new_card>div.latest_new_item>p:last-child{
+    transform: translateY(150%);
+}
+
+div.latest_new_card>div.latest_new_item>p.latest_new_date_dropdown{
+    animation-name: latest_new_date_dropdown;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    transform: translateY(0);
+}
+
+@keyframes latest_new_date_dropdown{
+    0%{
+        transform: translateY(-150%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+div.latest_new_card>div.latest_new_item>p.latest_new_content_dropup{
+    animation-name: latest_new_content_dropup;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    transform: translateY(0);
+}
+
+@keyframes latest_new_content_dropup{
+    0%{
+        transform: translateY(150%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* 線上預約與實體店面位址 */
+div.appointment_store_card_title{
+    display: flex;
+    margin-top: 200px;
+}
+
+div.appointment_store_card_title>h1{
+    flex: 1;
+    text-align: center;
+}
+
+div.appointment_store_card{
+    display: flex;
+    justify-content: space-around;
+}
+
+div.appointment_store_card>div.appointment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 277.5px;
+    background-color: #FCFAE3;
+    color: #d09661;
+    overflow: hidden;
+}
+
+div.appointment_store_card>div.appointment>img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);   
+}
+
+div.appointment_store_card>div.appointment:hover{
+    cursor: pointer;
+}
+
+div.appointment_store_card>div.appointment:hover>img{
+    cursor: pointer;
+    transform: translateY(-100%);
+    transition: transform 1s;
+}
+
+div.appointment_store_card>div.store{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 277.5px;
+    background-color: #FCFAE3;
+    color: #d09661;
+    overflow: hidden;
+}
+
+div.appointment_store_card>div.store>img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);   
+}
+
+div.appointment_store_card>div.store:hover{
+    cursor: pointer;
+}
+
+div.appointment_store_card>div.store:hover>img{
+    cursor: pointer;
+    transform: translateY(-100%);
+    transition: transform 1s;
+}
+
+/* 關於 */
+div.about_card{
+    position: relative;
+    width: 555px;
+    height: 555px;
+    /* border: 1px solid #d09661; */
+    margin: auto;
+    overflow: hidden;
+}
+
+div.about_card>div.about_content{
+    position: absolute;
+    text-align: center;
+    color: black;
+    transform: translateY(-150%);
+    width: 100%;
+}
+
+div.about_card:hover>div.about_content{
+    transform: translate(0);
+    opacity: 1;
+    transition: transform 1s;
+}
+
+div.about_card>div.about_content>h1{
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+div.about_card>div.about_content>h1:hover{
+    cursor: help;
+    color: #d09661;
+}
+
+div.about_card>div.about_content>p:hover{
+    color: white;
+}
+
+div.about_card>div.about_content>button.about_content_button{
+    margin-top: 150px;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #d09661;
+    color: #d09661;
+    background-position: -155px 0; 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div.about_card>div.about_content>button.about_content_button_dropdown{
+    cursor: pointer;
+    background-position: 0;
+    color: white;
+    animation-name: about_content_button;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes about_content_button{
+    0%{
+        color: #d09661;
+        background-position: -155px 0;
+    }
+    100%{
+        color: white;
+        background-position: 0;
+    }
+}
+
+/* 操作流程 */
+div.Operation_process_card{
+    display: flex;
+    width: 100%;
+    margin-top: 200px;
+}
+
+div.Operation_process_card>div{
+    flex: 1;
+}
+
+div.Operation_process_card>div.Operation_process_title_line_card{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div.Operation_process_title_line_text{
+    font-size: 24px;
+    color: #d09661;
+    text-align: center;
+    margin-right: 20px;
+}
+
+div.Operation_process_title_line_line{
+    position: relative;
+    width: 3px;
+    height: 550px;
+    background-color: #d09661;
+}
+
+div.Operation_process_circle_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+div.Operation_process_circle_card>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #FCFAE3;
+    color: #d09661;
+}
+
+div.Operation_process_circle_card>div:hover{
+    cursor: pointer;
+}
+
+div.Operation_process_chat_box_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+div.Operation_process_chat_box_card>div{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    background-color: #FCFAE3;
+    color: #d09661;
+    border-radius: 15px;
+    left: 100%;
+}
+
+div.Operation_process_chat_box_card>div.Operation_process_chat_box_chat_open{
+    left: 10%;
+    transition: left 1s;
+}
+
+div.Operation_process_chat_box_card>div>div{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 20px;
+    border-top: 10px;
+    border-bottom: 10px;
+    border-color: white;
+    border-right-color: #FCFAE3;
+    border-style: solid;
+    left: -20px;
+}

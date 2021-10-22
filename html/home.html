@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    <head lang="zh-tw">
+        <meta charset="UTF-8">
+        <title>個人專題首頁</title>
+        <link href="../css/banner_header.css" rel="stylesheet">
+        <link href="../css/home_content.css" rel="stylesheet">
+        <link href="../css/footer.css" rel="stylesheet">
+        <style>
+
+            /* body的margin歸零一定要寫在這邊，因為body自定義的margin是html檔這邊事先寫好的
+            ，寫在外部檔的話會因為優先權的問題而沒辦法歸零 */
+            body{
+                margin: 0px; 
+            }
+
+        </style>
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    </head>
+    <body>
+        <div class="all_div">
+            <!-- banner&header -->
+            <div class="banner_div">
+                <a href="#">
+                <div class="logo">
+                    <span class="iconify" data-icon="mdi:bee" style="color: #FFC700; width: 100px; height: 100px;"></span>
+                </div>
+                </a>
+                <img class="banner_image1" src="../image/banner/banner_1.jpg">
+                <img class="banner_image2" src="../image/banner/banner_2.jpg">
+                <ul class="left_ul">
+                    <li class="body_li">
+                        <a href="#">適合部位</a>
+                        <ul>
+                            <li>臉</li>
+                            <li>頭</li>
+                            <li>身體</li>
+                        </ul>
+                    </li>
+                    <li class="place_li">
+                        <a href="#">產地</a>
+                        <ul>
+                            <li>美國</li>
+                            <li>法國</li>
+                            <li>菲律賓</li>
+                            <li>波瀾</li>
+                            <li>台灣</li>
+                            <li>印度</li>
+                            <li>日本</li>
+                        </ul>
+                    </li>
+                    <li class="home_li"><a href="#">首頁</a></li>
+                    <li class="about_li"><a href="#">關於</a></li>
+                </ul>
+                <ul class="right_ul">
+                    <li class="ac_li"><a href="#">會員專區</a></li>
+                    <li class="login_li"><a href="#">登入</a></li>
+                    <li class="shop_li"><a href="#">購物車</a></li>
+                </ul>
+                <div class="hambuger_list">
+                    <div class="line_1"></div>
+                    <div class="line_2"></div>
+                    <div class="line_3"></div>
+                </div>
+                <div class="left_button">
+                    <span class="iconify" data-icon="mdi:chevron-left" style="color: #d09661; width: 50px; height: 50px;"></span>
+                </div>
+                <div class="right_button">
+                    <span class="iconify" data-icon="mdi:chevron-right" style="color: #d09661; width: 50px; height: 50px;"></span>
+                </div>
+                <div class="bottom_button">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <!-- 回到上層按鈕 -->
+            <div class="return_to_top">
+                <a href="#">
+                    <span class="iconify" data-icon="bx:bxs-up-arrow-circle" style="color: #d09661; width: 50px; height: 50px;"></span>
+                </a>
+            </div>
+
+            <!-- 推薦商品 -->
+            <h1 style="text-align: center; margin-top: 50px; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>推薦商品</h1>
+            <div class="Recommended_products">
+                <div class="Recommended_products_item">
+                    <img src="../image/商品圖片/cow肥皂.png">
+                    <div class="Recommended_products_price">
+                        <div>
+                            <div></div>
+                        </div>
+                        <p>NT$100</p>
+                    </div>
+                    <h2>日本牛乳石鹼_牛乳香皂</h2>
+                    <div class="star">
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                    </div>
+                    <button class="Recommended_products_button">購買</button>
+                </div>
+                <div class="Recommended_products_item">
+                    <img src="../image/商品圖片/橄欖樹草本玫瑰肥皂.png">
+                    <div class="Recommended_products_price">
+                        <div>
+                            <div></div>
+                        </div>
+                        <p>NT$100</p>
+                    </div>
+                    <h2>橄欖樹草本玫瑰肥皂</h2>
+                    <div class="star">
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                    </div>
+                    <button class="Recommended_products_button">購買</button>
+                </div>
+                <div class="Recommended_products_item">
+                    <img src="../image/商品圖片/橄欖樹草本薰衣草肥皂.png">
+                    <div class="Recommended_products_price">
+                        <div>
+                            <div></div>
+                        </div>
+                        <p>NT$100</p>
+                    </div>
+                    <h2>橄欖樹草本薰衣草肥皂</h2>
+                    <div class="star">
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                        <span class="iconify" data-icon="ant-design:star-filled" style="color: #FCBA11; width: 22px; height: 22px;"></span>
+                    </div>
+                    <button class="Recommended_products_button">購買</button>
+                </div>              
+            </div>
+            <!-- 最新消息 -->
+            <h1 style="text-align: center; margin-top: 200px; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>最新消息</h1>
+            <div class="latest_new_card">
+                <div class="latest_new_item">
+                    <p class="latest_new_date">日期</p>
+                    <p>消息標題</p>
+                    <p class="latest_new_content">消息內容</p>
+                </div>
+                <div class="latest_new_item">
+                    <p class="latest_new_date">日期</p>
+                    <p>消息標題</p>
+                    <p class="latest_new_content">消息內容</p>
+                </div>
+                <div class="latest_new_item">
+                    <p class="latest_new_date">日期</p>
+                    <p>消息標題</p>
+                    <p class="latest_new_content">消息內容</p>
+                </div>
+                <div class="latest_new_item">
+                    <p class="latest_new_date">日期</p>
+                    <p>消息標題</p>
+                    <p class="latest_new_content">消息內容</p>
+                </div>
+                <div class="latest_new_item">
+                    <p class="latest_new_date">日期</p>
+                    <p>消息標題</p>
+                    <p class="latest_new_content">消息內容</p>
+                </div>
+            </div>
+            <!-- 體驗館線上預約&實體店面 -->
+            <div class="appointment_store_card_title">
+                <h1 style="text-align: center; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>線上預約</h1>
+                <h1 style="text-align: center; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>實體地址</h1>
+            </div>
+            <div class="appointment_store_card">
+                <div class="appointment">
+                    <img src="../image/首頁的預約和地圖圖片/camera-1130731_1920.jpg">
+                    <span class="iconify" data-icon="whh:appointment" 
+                    style="color: #d09661; width: 100px;height: 100px; margin-top: 20px;"></span><br>
+                    <h1>體驗館行程線上預約</h1>
+                </div>
+                <div class="store">
+                    <img src="../image/首頁的預約和地圖圖片/實體店面位址.jpg">
+                    <span class="iconify" data-icon="el:map-marker" 
+                    style="color: #d09661; width: 100px;height: 100px; margin-top: 20px;"></span><br>
+                    <h1>實體店家地址</h1>
+                    <p>新北市光復路一段</p>
+                </div>
+            </div>
+            <!-- 關於 -->
+            <h1 style="text-align: center; margin-top: 200px; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>關於</h1>
+            <div class="about_card" style="background-image: url('../image/關於圖片/pexels-karolina-grabowska-4210317.jpg'); background-repeat: no-repeat; background-size: cover;">
+                <div class="about_content">
+                    <h1>關於</h1>
+                    <p>此網站為簡聖舫的個人專題，主要是在做有關販售肥皂的部分</p>
+                    <p>如果想知道更多的話請點選下面按鈕</p>
+                    <button class="about_content_button" style="background-image: url('../image/按鈕特效背景圖/d09661色碼背景圖.png');">前往查看</button>
+                </div>
+            </div>
+            <!-- 操作流程 -->
+            <div class="Operation_process_card">
+                <div class="Operation_process_title_line_card">
+                    <div class="Operation_process_title_line_text">
+                        <p>操</p>
+                        <p>做</p>
+                        <p>流</p>
+                        <p>程</p>
+                    </div>
+                    <div class="Operation_process_title_line_line">
+                        <span class="iconify" data-icon="eva:arrow-ios-downward-fill" 
+                        style="color: #d09661;transform: translate(-23px, 532px); width: 50px;" data-height="30"></span>
+                    </div>
+                </div>
+                <div class="Operation_process_circle_card">
+                    <div class="Operation_process_circle_circle1">
+                        <p>選擇喜歡的食物</p>
+                    </div>
+                    <div class="Operation_process_circle_circle2">
+                        <p>至購物車確認清單</p>
+                    </div>
+                    <div class="Operation_process_circle_circle3">
+                        <p>完成付款！</p>
+                    </div>
+                </div>
+                <div class="Operation_process_chat_box_card">
+                    <div class="Operation_process_chat_box_chat1">
+                        <div></div>
+                        <p>選擇喜歡的食物，點選購物車或者購</p>
+                        <p>買按鈕即可將該商品放購物務車裡</p>
+                    </div>
+                    <div class="Operation_process_chat_box_chat2">
+                        <div></div>
+                        <p>至購物車確認清單，並且確認付款方</p>
+                        <p>式沒問題的話，即可前往結帳</p>
+                    </div>
+                    <div class="Operation_process_chat_box_chat3">
+                        <div></div>
+                        <p>完成付款後，等待5~7個工作天即可</p>
+                        <p>收到您購買的商品</p>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="footer_card">
+                <h3>聯絡</h3>
+                <div class="footer_line"></div>
+                <ul>
+                    <li class="footer_button" style="background-image: url('../image/按鈕特效背景圖/FCFAE3色碼背景圖.png');">
+                        <a href="#">FACEBOOK</a>
+                    </li>
+                    <li class="footer_button" style="background-image: url('../image/按鈕特效背景圖/FCFAE3色碼背景圖.png');">
+                        <a href="#">GMAIL</a>
+                    </li>
+                </ul>
+                <div class="footer_question">
+                    <a href="#">
+                        <span class="iconify" data-icon="fa-solid:question-circle" style="color: #d09661;"></span>
+                        <h3>常見問題</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="../js/home.js"></script>
+        <script src="../js/footer.js"></script>
+    </body>
+</html>
