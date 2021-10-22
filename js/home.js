@@ -1,10 +1,4 @@
 
-// 漢堡條動畫處理
-let hamburger_card=document.getElementsByClassName("hambuger_list")[0];
-// getElementsByClassName會回傳符合的dom到一個新的array裡
-let line_1=document.getElementsByClassName("line_1")[0];
-let line_2=document.getElementsByClassName("line_2")[0];
-let line_3=document.getElementsByClassName("line_3")[0];
 // 購買按鈕特效
 let Recommended_products_button=document.getElementsByClassName("Recommended_products_button");
 // 最新消息
@@ -22,25 +16,6 @@ let Operation_process_chat_box_chat2=document.getElementsByClassName("Operation_
 let Operation_process_chat_box_chat3=document.getElementsByClassName("Operation_process_chat_box_chat3")[0];
 
 
-
-
-// 漢堡條動畫處理
-hamburger_card.addEventListener("click", ()=>{
-    if(hamburger_card.className==="hambuger_list"){
-        hamburger_card.classList.add("hambuger_list_hover");
-        line_1.classList.add("rotate_1");
-        line_2.classList.add("rotate_2");
-        line_3.classList.add("rotate_3");
-    }
-    else if(hamburger_card.className==="hambuger_list hambuger_list_hover"){
-        hamburger_card.classList.remove("hambuger_list_hover");
-        line_1.classList.remove("rotate_1");
-        line_2.classList.remove("rotate_2");
-        line_3.classList.remove("rotate_3");
-    }
-})
-
-// 推薦商品動畫處理
 
 
 // 購買按鈕特效
@@ -118,3 +93,4 @@ Operation_process_circle_circle3.addEventListener("mouseenter", ()=>{
 Operation_process_circle_circle3.addEventListener("mouseleave", ()=>{
     Operation_process_chat_box_chat3.classList.remove("Operation_process_chat_box_chat_open");
 })
+

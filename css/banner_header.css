@@ -116,6 +116,7 @@ div.logo:hover{
 }
 
 /* header ul&li */
+
 ul.left_ul{
     position: absolute;
     left: 150px;
@@ -193,6 +194,16 @@ ul.right_ul>li>a:hover{
     text-decoration: underline #d09661;
 }
 
+ul.ul_fixed{
+    position: fixed;
+    z-index: 101;
+}
+
+ul.ul_fixed>li>a{
+    color: #d09661;
+    transition: color 2s;
+}
+
 /* hambuger_list */
 div.hambuger_list{
     position: absolute;
@@ -215,10 +226,12 @@ div.hambuger_list>div{
 }
 
 div.hambuger_list_hover{
+    position: fixed;
     animation-name: div_rotate;
     animation-duration: 0.5s;
     animation-timing-function: linear;
     transform: rotate(180deg);
+    z-index: 101;
 }
 
 div.hambuger_list>div.rotate_1{
