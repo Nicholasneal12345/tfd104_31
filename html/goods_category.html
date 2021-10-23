@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head lang="zh-tw">
+        <meta charset="UTF-8">
+        <title>商品分類</title>
+        <link href="../css/banner_header.css" rel="stylesheet">
+        <link href="../css/goods_category.css" rel="stylesheet">
+        <link href="../css/footer.css" rel="stylesheet">
+        <style>
+
+            /* body的margin歸零一定要寫在這邊，因為body自定義的margin是html檔這邊事先寫好的
+            ，寫在外部檔的話會因為優先權的問題而沒辦法歸零 */
+            body{
+                margin: 0px; 
+            }
+
+        </style>
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    </head>
+    <body>
+        <div class="all_div">
+            <!-- banner&header -->
+            <div class="banner_div">
+                <a href="#">
+                <div class="logo">
+                    <span class="iconify" data-icon="mdi:bee" style="color: #FFC700; width: 100px; height: 100px;"></span>
+                </div>
+                </a>
+                <img class="banner_image1" src="../image/banner/banner_1.jpg">
+                <img class="banner_image2" src="../image/banner/banner_2.jpg">
+                <ul class="left_ul">
+                    <li class="body_li">
+                        <a href="#">適合部位</a>
+                        <ul>
+                            <li>臉</li>
+                            <li>頭</li>
+                            <li>身體</li>
+                        </ul>
+                    </li>
+                    <li class="place_li">
+                        <a href="#">產地</a>
+                        <ul>
+                            <li>美國</li>
+                            <li>法國</li>
+                            <li>菲律賓</li>
+                            <li>波瀾</li>
+                            <li>台灣</li>
+                            <li>印度</li>
+                            <li>日本</li>
+                        </ul>
+                    </li>
+                    <li class="home_li"><a href="#">首頁</a></li>
+                    <li class="about_li"><a href="#">關於</a></li>
+                </ul>
+                <ul class="right_ul">
+                    <li class="ac_li"><a href="#">會員專區</a></li>
+                    <li class="login_li"><a href="#">登入</a></li>
+                    <li class="shop_li"><a href="#">購物車</a></li>
+                </ul>
+                <div class="hambuger_list">
+                    <div class="line_1"></div>
+                    <div class="line_2"></div>
+                    <div class="line_3"></div>
+                </div>
+                <div class="left_button">
+                    <span class="iconify" data-icon="mdi:chevron-left" style="color: #d09661; width: 50px; height: 50px;"></span>
+                </div>
+                <div class="right_button">
+                    <span class="iconify" data-icon="mdi:chevron-right" style="color: #d09661; width: 50px; height: 50px;"></span>
+                </div>
+                <div class="bottom_button">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <!-- 回到上層按鈕 -->
+            <div class="return_to_top">
+                <span class="iconify" data-icon="bx:bxs-up-arrow-circle" style="color: #d09661; width: 50px; height: 50px;"></span>
+            </div>
+            <!-- 漢堡條點擊後出現的頁面 -->
+            <div class="hamburger_content">
+                123342342asdadsafdfsgsgds
+            </div>
+            <!-- 條件選擇功能 -->
+            <h2 class="goods_selection_title"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>適合部位&gt;&gt;頭</h2>
+            <div class="goods_category_content_card">
+                <div class="goods_selection_selected_condition_and_goods_selection_card">
+                    <div class="goods_selection_selected_condition">
+                        <div class="goods_selection_selected_condition_item">
+                            <div class="goods_selection_selected_condition_item_line"></div>
+                            <p>&nbsp;&lt;&nbsp;NT$100</p>
+                        </div>
+                        <div class="goods_selection_selected_condition_item">
+                            <div class="goods_selection_selected_condition_item_line"></div>
+                            <p>&nbsp;&gt;=&nbsp;NT$100</p>
+                        </div>
+                        <div class="goods_selection_selected_condition_item">
+                            <div class="goods_selection_selected_condition_item_line"></div>
+                            <p>開心</p>
+                        </div>
+                        <div class="goods_selection_selected_condition_item">
+                            <div class="goods_selection_selected_condition_item_line"></div>
+                            <p>平淡</p>
+                        </div>
+                    </div>
+                    <div class="goods_selection_card">
+                        <div class="goods_selection_condition">
+                            <ul>
+                                <li class="goods_selection_condition_title1">
+                                    <h2>價格</h2>
+                                    <div></div>
+                                    <ul class="goods_selection_condition_title1_unchecked">
+                                        <li>
+                                            <div class="goods_selection_price_checkbox"></div>
+                                            <p class="price_checkbox_title">&nbsp;&lt;&nbsp;NT$100</p>
+                                        </li>
+                                        <li>
+                                            <div class="goods_selection_price_checkbox"></div>
+                                            <p class="price_checkbox_title">&nbsp;&gt;=&nbsp;NT$100</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="goods_selection_condition_title2">
+                                    <h2>心情</h2>
+                                    <div></div>
+                                    <ul class="goods_selection_condition_title2_unchecked">
+                                        <li>
+                                            <div class="goods_selection_mood_checkbox"></div>
+                                            <p class="mood_checkbox_title">開心</p>
+                                        </li>
+                                        <li>
+                                            <div class="goods_selection_mood_checkbox"></div>
+                                            <p class="mood_checkbox_title">平淡</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 商品預覽 -->
+                <div class="product_preview_card">
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/燕麥+杏仁香皂.png" alt="燕麥+杏仁香皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">燕麥+杏仁香皂</h2>
+                            <p>美國原裝進口</p>
+                            <p>含燕麥及滋潤成分</p>
+                            <p>細微顆粒溫和去除角質</p>
+                            <div class="product_preview_item_content_button">
+                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/薰衣草保濕香皂.png" alt="薰衣草保濕香皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">薰衣草保濕香皂</h2>
+                            <p>美國原裝進口</p>
+                            <p>含豐富水嫩因子</p>
+                            <p>溫和洗淨不緊繃</p>
+                            <div class="product_preview_item_content_button">
+                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/亮彩冷壓香皂.png" alt="亮彩冷壓香皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">亮彩冷壓香皂</h2>
+                            <p>菲律賓原裝進口</p>
+                            <p>無油商品</p>
+                            <p>不含對羥基苯甲酸酯</p>
+                            <div class="product_preview_item_content_button">
+                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/愛馬仕_橘綠之泉香皂.png" alt="愛馬仕_橘綠之泉香皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">愛馬仕_橘綠之泉香皂</h2>
+                            <p>法國原裝進口</p>
+                            <p>香味持久</p>
+                            <p>洗後不乾澀</p>
+                            <div class="product_preview_item_content_button">
+                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/蘆薈+酪梨香皂.png" alt="蘆薈+酪梨香皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">蘆薈+酪梨香皂</h2>
+                            <p>美國原裝進口</p>
+                            <p>含酪梨油及橄欖油成份</p>
+                            <p>溫和洗淨不緊繃</p>
+                            <div class="product_preview_item_content_button">
+                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/愛馬仕_橘采星光香皂.png" alt="愛馬仕_橘采星光香皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">愛馬仕_橘采星光香皂</h2>
+                            <p>法國原裝進口</p>
+                            <p>女性香水</p>
+                            <p>保存在室溫下即可</p>
+                            <div class="product_preview_item_content_button">
+                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="footer_card">
+                <h3>聯絡</h3>
+                <div class="footer_line"></div>
+                <ul>
+                    <li class="footer_button" style="background-image: url('../image/按鈕特效背景圖/FCFAE3色碼背景圖.png');">
+                        <a href="#">FACEBOOK</a>
+                    </li>
+                    <li class="footer_button" style="background-image: url('../image/按鈕特效背景圖/FCFAE3色碼背景圖.png');">
+                        <a href="#">GMAIL</a>
+                    </li>
+                </ul>
+                <div class="footer_question">
+                    <a href="#">
+                        <span class="iconify" data-icon="fa-solid:question-circle" style="color: #d09661;"></span>
+                        <h3>常見問題</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="../js/banner_header.js"></script>
+        <script src="../js/goods_category_content.js"></script>
+        <script src="../js/footer.js"></script>
+    </body>
+</html>

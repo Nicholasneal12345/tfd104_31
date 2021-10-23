@@ -1,43 +1,4 @@
 
-/* 返回上層按鈕 */
-div.return_to_top{
-    position: fixed;
-    transform: translateY(-500%);
-    width: 50px;
-    height: 50px;
-    right: 5%;
-    z-index: 99;
-    opacity: 0;
-    transition: all 2s;
-}
-
-div.make_sure_return_to_top{
-    position: fixed;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-div.make_sure_return_to_top:hover{
-    cursor: pointer;
-}
-
-/* 漢堡條點擊後出現的頁面 */
-div.hamburger_content{
-    top: 0%;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 100;
-    background-color: #FCFAE3;
-    opacity: 0.9;
-    transform: translateX(100%);
-    transition: all 2s;
-}
-
-div.hamburger_content_open{
-    transform: translateX(0);
-}
-
 /* 推薦商品 */
 div.Recommended_products{
     position: relative;

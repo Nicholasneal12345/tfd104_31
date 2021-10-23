@@ -27,7 +27,7 @@ hamburger_card.addEventListener("click", ()=>{
 
 // 返回按鈕頂部
 window.addEventListener("scroll", ()=>{
-    if(document.documentElement.scrollTop>1000){
+    if(document.documentElement.scrollTop>600){
         return_to_top.classList.add("make_sure_return_to_top");
         let make_sure_return_to_top=document.getElementsByClassName("make_sure_return_to_top")[0];
         make_sure_return_to_top.addEventListener("click", ()=>{
