@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>商品分類</title>
         <link href="../css/banner_header.css" rel="stylesheet">
+        <link href="../css/about.css" rel="stylesheet">
         <link href="../css/footer.css" rel="stylesheet">
         <style>
 
@@ -80,6 +81,43 @@
             <div class="hamburger_content">
                 123342342asdadsafdfsgsgds
             </div>
+            <!-- 關於 -->
+            <h1 class="goods_selection_title" style="text-align: center; color: #d09661; margin-top: 100px;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>關於</h1>
+            <div class="about_card">
+                <div class="about_item about_item1" style="background-image: url(../image/關於圖片/soap-bubble-1958650.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <h2 class="goods_selection_title"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>動機</h2>
+                    <p>為什麼我會創立此網站？</p>
+                </div>
+                <div class="about_item about_item2" style="background-image: url(../image/關於圖片/soap-bubble-824564.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <h2 class="goods_selection_title"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>過程</h2>
+                    <p>創建網站時遇到那些困難？</p>
+                </div>
+                <div class="about_item about_item3" style="background-image: url(../image/關於圖片/soap-bubble-2403673.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <h2 class="goods_selection_title"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>生物可分解</h2>
+                    <p>不含化學物質及壬基苯酚等環境荷爾蒙，使用</p>
+                    <p>後產生的肥皂水可藉由微生物活動作用而使物</p>
+                    <p>質分解消化，不破壞環境，人親土親，環保永續。</p>
+                </div>
+                <div class="about_item about_item4" style="background-image: url(../image/關於圖片/love-2055960.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <h2 class="goods_selection_title"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>無添加</h2>
+                    <p>無添加任何的有害化學物質，</p>
+                    <p>只以天然原料入皂，對人體健康無害</p>
+                    <p>輕鬆樂活。</p>
+                </div>
+                <div class="about_item about_item5" style="background-image: url(../image/關於圖片/soap-bubbles-3517247.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <h2 class="goods_selection_title"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>100%皂化</h2>
+                    <p>以水、石鹼、椰子油、橄欖油，經１００％</p>
+                    <p>皂化而成，絕對不使用化學皂基，不含酒精</p>
+                    <p>及化學溶劑，品質純淨自然，肌膚無負擔。</p>
+                </div>
+                <div class="about_item about_item6"  style="background-image: url(../image/關於圖片/soap-bubbles-801835.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <h2 class="goods_selection_title"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>本店產品</h2>
+                    <p>本店產品有哪些以及來自哪裡？</p>
+                </div>
+                <div class="about_item about_item7">
+                    <span class="iconify" data-icon="fa-solid:search-plus" style="color: #d09661; width: 100px; height: 100px; "></span>
+                </div>
+            </div>
             <!-- footer -->
             <div class="footer_card">
                 <h3>聯絡</h3>
@@ -101,6 +139,28 @@
             </div>
         </div>
         <script src="../js/banner_header.js"></script>
+        <!-- 因為這個頁面只有處理一個click事件，所以js直接寫在html裡 -->
+        <script>
+            ;(function(){
+            
+            // 點擊放大鏡icon後的動畫處理
+            let enlarge_and_reduce_button=document.getElementsByClassName("about_item7")[0];
+            let about_card=document.getElementsByClassName("about_card")[0];
+            let about_item=document.getElementsByClassName("about_item");
+
+
+
+
+            enlarge_and_reduce_button.addEventListener("click", ()=>{
+                about_card.classList.toggle("about_card_enlarge");
+                for(let i=0; i<7; i=i+1){
+                    about_item[i].classList.toggle(`about_item${i+1}_enlarge`);
+                    console.log(123)
+                }
+            })
+
+            })()
+        </script>
         <script src="../js/footer.js"></script>
     </body>
 </html>

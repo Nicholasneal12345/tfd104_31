@@ -16,7 +16,7 @@ let return_to_top=document.getElementsByClassName("return_to_top")[0];
 
 // 漢堡條動畫處理
 hamburger_card.addEventListener("click", ()=>{
-    hamburger_card.classList.add("hambuger_list_hover");
+    hamburger_card.classList.toggle("hambuger_list_hover");
     line_1.classList.toggle("rotate_1");
     line_2.classList.toggle("rotate_2");
     line_3.classList.toggle("rotate_3");
