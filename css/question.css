@@ -1,0 +1,127 @@
+div.question_chat_card{
+    display: flex;
+    flex-direction: column;
+    /* height: 800px; */
+    margin-top: 200px;
+}
+
+div.question_chat_card>div.question_chat_item{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+div.question_chat_card>div.question_chat_item>img{
+    width: 200px;
+    height: 200px;
+}
+
+
+div.question_chat_card>div.question_chat_item>div{
+    position: relative;
+    width: 500px;
+    height: 150px;
+    background-color: #FCFAE3;
+    vertical-align: middle;
+    border-radius: 15px;
+}
+
+div.question_chat_card>div.question_chat_item1>div
+,div.question_chat_card>div.question_chat_item3>div{
+    transform: translateX(20%);
+}
+
+div.question_chat_card>div.question_chat_item2>div
+,div.question_chat_card>div.question_chat_item4>div{
+    transform: translateX(-20%);
+}
+
+div.question_chat_card>div.question_chat_item1>div>div
+,div.question_chat_card>div.question_chat_item3>div>div{
+    position: absolute;
+    border-top: 15px solid white;
+    border-right: 30px solid #FCFAE3;
+    border-bottom: 15px solid white;
+    border-left: 0px;
+    left: -30px;
+    top: 60px;
+}
+
+div.question_chat_card>div.question_chat_item2>div>div
+,div.question_chat_card>div.question_chat_item4>div>div{
+    position: absolute;
+    border-top: 15px solid white;
+    border-right: 0px;
+    border-bottom: 15px solid white;
+    border-left: 30px solid #FCFAE3;
+    right: -30px;
+    top: 60px;
+}
+
+div.question_chat_card>div.question_chat_item>div>p{
+    text-align: center;
+    margin: 0;
+    line-height: 150px;
+}
+
+/* 更多問題 */
+form.more_question_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 500px;
+    margin: auto;
+    color: #d09661;
+}
+
+div.gender_card>input{
+    margin: 0 30px;
+}
+
+div.birthday_card>input{
+    margin: 0 30px;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: #FCFAE3;
+    border: 1px solid #d09661;
+}
+
+div.email_card>input{
+    margin: 0 22px;
+    padding: 6.5px 13px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #FCFAE3;
+    border: 1px solid #d09661;
+}
+
+div.input_text_card>textarea{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #FCFAE3;
+    border: 1px solid #d09661;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+form.more_question_card>input{
+    width: 134px;
+    height: 37px;
+    margin-top: 50px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #d09661;
+    color: #d09661;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -140px 0;
+}
+
+form.more_question_card>input:hover{
+    background-position: 0;
+    cursor: pointer;
+    transition: all 1s;
+}

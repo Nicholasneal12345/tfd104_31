@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head lang="zh-tw">
+        <meta charset="UTF-8">
+        <title>商品分類</title>
+        <link href="../css/banner_header.css" rel="stylesheet">
+        <link href="../css/question.css" rel="stylesheet">
+        <link href="../css/footer.css" rel="stylesheet">
+        <style>
+
+            /* body的margin歸零一定要寫在這邊，因為body自定義的margin是html檔這邊事先寫好的
+            ，寫在外部檔的話會因為優先權的問題而沒辦法歸零 */
+            body{
+                margin: 0px; 
+            }
+
+        </style>
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    </head>
+    <body>
+        <div class="all_div">
+            <!-- banner&header -->
+            <div class="banner_div">
+                <a href="#">
+                <div class="logo">
+                    <span class="iconify" data-icon="mdi:bee" style="color: #FFC700; width: 100px; height: 100px;"></span>
+                </div>
+                </a>
+                <img class="banner_image1" src="../image/banner/banner_1.jpg">
+                <img class="banner_image2" src="../image/banner/banner_2.jpg">
+                <ul class="left_ul">
+                    <li class="body_li">
+                        <a href="#">適合部位</a>
+                        <ul>
+                            <li>臉</li>
+                            <li>頭</li>
+                            <li>身體</li>
+                        </ul>
+                    </li>
+                    <li class="place_li">
+                        <a href="#">產地</a>
+                        <ul>
+                            <li>美國</li>
+                            <li>法國</li>
+                            <li>菲律賓</li>
+                            <li>波瀾</li>
+                            <li>台灣</li>
+                            <li>印度</li>
+                            <li>日本</li>
+                        </ul>
+                    </li>
+                    <li class="home_li"><a href="#">首頁</a></li>
+                    <li class="about_li"><a href="#">關於</a></li>
+                </ul>
+                <ul class="right_ul">
+                    <li class="ac_li"><a href="#">會員專區</a></li>
+                    <li class="login_li"><a href="#">登入</a></li>
+                    <li class="shop_li"><a href="#">購物車</a></li>
+                </ul>
+                <div class="hambuger_list">
+                    <div class="line_1"></div>
+                    <div class="line_2"></div>
+                    <div class="line_3"></div>
+                </div>
+                <div class="left_button">
+                    <span class="iconify" data-icon="mdi:chevron-left" style="color: #d09661; width: 50px; height: 50px;"></span>
+                </div>
+                <div class="right_button">
+                    <span class="iconify" data-icon="mdi:chevron-right" style="color: #d09661; width: 50px; height: 50px;"></span>
+                </div>
+                <div class="bottom_button">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <!-- 回到上層按鈕 -->
+            <div class="return_to_top">
+                <span class="iconify" data-icon="bx:bxs-up-arrow-circle" style="color: #d09661; width: 50px; height: 50px;"></span>
+            </div>
+            <!-- 漢堡條點擊後出現的頁面 -->
+            <div class="hamburger_content">
+                123342342asdadsafdfsgsgds
+            </div>
+            <!-- 常見問題 -->
+            <h1 style="text-align: center; margin-top: 50px; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>常見問題Q&amp;A</h1>
+            <div class="question_chat_card">
+                <div class="question_chat_item question_chat_item1">
+                    <img src="../image/常見問題大頭貼/大頭貼1.jpg">
+                    <div>
+                        <p>問題一問題一問題一問題一？</p>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="question_chat_item question_chat_item2">
+                    <div>
+                        <p>回答一回答一回答一回答一？</p>
+                        <div></div>
+                    </div>
+                    <img src="../image/常見問題大頭貼/大頭貼2.png">
+                </div>
+                <div class="question_chat_item question_chat_item3">
+                    <img src="../image/常見問題大頭貼/大頭貼3.png">
+                    <div>
+                        <p>問題二問題二問題二問題二</p>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="question_chat_item question_chat_item4">
+                    <div>
+                        <p>回答二回答二回答二回答二</p>
+                        <div></div>
+                    </div>
+                    <img src="../image/常見問題大頭貼/大頭貼4.png">
+                </div>
+            </div>
+            <!-- 更多問題 -->
+            <h1 style="text-align: center; margin-top: 50px; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>更多問題</h1>
+            <form class="more_question_card" method="post" action="./index.html">
+                <div class="gender_card">
+                    <h2 style="color: #d09661; display: inline-block; margin-right: 20px;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>性別</h2>
+                    <input type="radio" name="gender" value="boy" id="gender_is_boy"><label for="gender_is_boy">男</label>
+                    <input type="radio" name="gender" value="girl" id="gender_is_girl"><label for="gender_is_girl">女</label>
+                    <input type="radio" name="gender" value="other" id="gender_is_other"><label for="gender_is_other">其他</label>
+                </div>
+                <div class="birthday_card">
+                    <label for="birthday_input"><h2 style="color: #d09661; display: inline-block; margin-right: 20px;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>性別</h2></label>
+                    <input id="birthday_input" type="date">
+                </div>
+                <div class="email_card">
+                    <label for="email_input"><h2 style="color: #d09661; display: inline-block;  margin-right: 20px;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>email</h2></label>
+                    <input type="email" id="email_input" placeholder="請輸入email...">
+                </div>
+                <div class="input_text_card">
+                    <textarea placeholder="請輸入訊息..."></textarea>
+                </div>
+                <input type="submit" value="送出" style="background-image: url('../image/按鈕特效背景圖/FCFAE3色碼背景圖.png');">
+            </form>
+            <!-- footer -->
+            <div class="footer_card">
+                <h3>聯絡</h3>
+                <div class="footer_line"></div>
+                <ul>
+                    <li class="footer_button" style="background-image: url('../image/按鈕特效背景圖/FCFAE3色碼背景圖.png');">
+                        <a href="#">FACEBOOK</a>
+                    </li>
+                    <li class="footer_button" style="background-image: url('../image/按鈕特效背景圖/FCFAE3色碼背景圖.png');">
+                        <a href="#">GMAIL</a>
+                    </li>
+                </ul>
+                <div class="footer_question">
+                    <a href="#">
+                        <span class="iconify" data-icon="fa-solid:question-circle" style="color: #d09661;"></span>
+                        <h3>常見問題</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="../js/banner_header.js"></script>
+        <script src="../js/footer.js"></script>
+    </body>
+</html>
