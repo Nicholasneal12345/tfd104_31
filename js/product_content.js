@@ -57,15 +57,9 @@ products_count_input.addEventListener("change", function(){
 })
 
 // 處理下拉的部分
-for(let i=0; i<products_count_select_card.children.length; i=i+1){
-    products_count_select_card.children[i].addEventListener("change", function(){
-        now_count.innerHTML=`您目前已選擇：${this.value}`;
-        console.log(123)
-    })
-}
-
 products_count_select_card.addEventListener("change", ()=>{
     now_count.innerHTML=`您目前已選擇：${products_count_select_card.value}`;
+    products_count_input.value=products_count_select_card.value;
 })
 
 // 商品購買按鈕特效
