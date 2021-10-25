@@ -19,7 +19,7 @@ div.Recommended_products>div.Recommended_products_item{
     height: 380px;
     background-color: #FCFAE3;
     text-align: center;
-    box-shadow: 0 15px 10px 0 gray;
+    box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 div.Recommended_products>div.Recommended_products_item>div.Recommended_products_price{
