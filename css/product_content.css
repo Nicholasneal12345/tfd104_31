@@ -94,7 +94,7 @@ div.more_products_card{
     overflow: hidden;
 }
 
-div.more_products_card>div{
+div.more_products_card>a>div{
     position: absolute;
     width: 24%;
     height: 100%;
@@ -106,6 +106,10 @@ div.more_products_card>div{
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+div.more_products_card:hover>a>div{
+    animation-play-state: paused;
 }
 
 @keyframes more_products_item{
@@ -141,43 +145,43 @@ div.more_products_card>div{
     }
 }
 
-div.more_products_card>div.more_products_item1{
+div.more_products_card>a>div.more_products_item1{
     top: 0;
     left: 0;
 }
 
-div.more_products_card>div.more_products_item2{
+div.more_products_card>a>div.more_products_item2{
     top: 0;
     left: 315px;
 }
 
-div.more_products_card>div.more_products_item3{
+div.more_products_card>a>div.more_products_item3{
     top: 0;
     left: 630px;
 }
 
-div.more_products_card>div.more_products_item4{
+div.more_products_card>a>div.more_products_item4{
     top: 0;
     left: 945px;
 }
 
 
-div.more_products_card>div.more_products_item5{
+div.more_products_card>a>div.more_products_item5{
     top: 0;
     left: 1260px;
 }
 
-div.more_products_card>div.more_products_item6{
+div.more_products_card>a>div.more_products_item6{
     top: 0;
     left: 1575px;
 }
 
-div.more_products_card>div.more_products_item7{
+div.more_products_card>a>div.more_products_item7{
     top: 0;
     left: 1890px;
 }
 
-div.more_products_card>div.more_products_item8{
+div.more_products_card>a>div.more_products_item8{
     top: 0;
     left: 2205px;
 }
