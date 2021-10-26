@@ -1,4 +1,6 @@
 
+// 處理header按過後的事件處理
+let header_li_a=document.getElementsByClassName("header_li_a");
 // 漢堡條動畫處理
 let hamburger_card=document.getElementsByClassName("hambuger_list")[0];
 // getElementsByClassName會回傳符合的dom到一個新的array裡
@@ -13,6 +15,19 @@ let return_to_top=document.getElementsByClassName("return_to_top")[0];
 
 
 
+
+// 處理header按過後的事件處理
+for(let i=0; i<header_li_a.length; i=i+1){
+    header_li_a[i].addEventListener("click", ()=>{
+        // reset所有header的狀態
+        for(let j=0; j<header_li_a.length; j=j+1){
+            if(header_li_a[j].className==="header_li_a header_li_a_clicked"){
+                header_li_a[j].classList.remove("header_li_a_clicked");
+            }
+        }
+        header_li_a[i].classList.add("header_li_a_clicked");
+    })
+}
 
 // 漢堡條動畫處理
 hamburger_card.addEventListener("click", ()=>{
