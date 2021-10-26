@@ -1,0 +1,101 @@
+
+/* 聯繫 */
+div.leaf_line_card{
+    width: 50%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+div.appointment_card{
+    width: 50%;
+    margin: auto;
+}
+
+div.appointment_card_item>input{
+    width: 400px;
+    right: 30px;
+    font-size: 24px;
+    background-color: #FCFAE3;
+    color: #d09661;
+    border: 3px solid #d09661;
+    border-radius: 10px;
+    margin-left: 140px;
+    outline: none;
+}
+
+div.appointment_card2{
+    width: 50%;
+    margin: 50px auto;
+}
+
+div.appointment_gender_item{
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+}
+
+div.appointment_birthday_item{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+div.appointment_birthday_item>input{
+    border-radius: 10px;
+    border: 3px solid #d09661;
+    background-color: #FCFAE3;
+    color: #d09661;
+    outline: none;
+}
+
+div.appointment_address_item{
+    color: #d09661;
+    width: 100%;
+}
+
+div.appointment_address_item>input{
+    border: 3px solid #d09661;
+    border-radius: 10px;
+    background-color: #FCFAE3;
+    color: #d09661;
+    width: 500px;
+    margin-left: 30px;
+    font-size: 24px;
+    outline: none;
+}
+
+div.appointment_textarea_item{
+    text-align: center;
+}
+
+div.appointment_textarea_item>textarea{
+    width: 93%;
+    height: 300px;
+    margin: auto;
+    background-color: #FCFAE3;
+    resize:none;
+    border-radius: 10px;
+    border: none;
+    margin-top: 50px;
+}
+
+div.appointment_button_item{
+    width: 100px;
+    border: 3px solid #d09661;
+    border-radius: 5px;
+    background-color: #FCFAE3;
+    color: #d09661;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -110px 0;
+}
+
+div.appointment_button_item:hover{
+    color: white;
+    background-position: 0;
+    cursor: pointer;
+    transition: all 1s;
+}

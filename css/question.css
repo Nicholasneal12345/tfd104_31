@@ -105,6 +105,7 @@ div.input_text_card>textarea{
     border: 1px solid #d09661;
     padding: 20px;
     margin-top: 50px;
+    resize:none
 }
 
 form.more_question_card>input{
