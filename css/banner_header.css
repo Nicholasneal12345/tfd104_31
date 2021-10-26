@@ -395,7 +395,7 @@ div.hamburger_content{
     background-color: #FCFAE3;
     opacity: 0.9;
     transform: translateX(100%);
-    transition: all 2s;
+    transition: all 1s;
 }
 
 div.hamburger_content_open{
