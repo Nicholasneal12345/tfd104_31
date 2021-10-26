@@ -4,6 +4,10 @@ div.all_div{
     width: 100%;
 }
 
+div.all_div_closed{
+    opacity: 0.5;
+}
+
 /* div.banner_div */
 div.banner_div{
     position: relative;

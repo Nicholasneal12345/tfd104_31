@@ -1,0 +1,104 @@
+div.login_and_register_card{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 500px;
+    height: 500px;
+    flex-direction: column;
+    z-index: 98;
+    text-align: center;
+    background-color: #FCFAE3;
+    border-radius: 10px;
+}
+
+div.login_and_register_card_open{
+    display: flex;
+}
+
+div.login_and_register_card>div.login_and_register_title_card{
+    position: relative;
+    width: 50%;
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+
+div.login_and_register_card>div.login_and_register_title_card:hover{
+    cursor: pointer;
+}
+
+div.login_and_register_card>div.login_and_register_title_card>p{
+    display: inline-block;
+    color: #d09661;
+    z-index: 2;
+}
+
+div.login_and_register_card>div.login_and_register_title_card>div.login_title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #F1E3A7;
+    transform: translateX(0);
+    transition: all 0.5s;
+}
+
+div.login_and_register_card>div.login_and_register_title_card>div.register_title{
+    transform: translateX(100%);
+}
+
+div.login_and_register_card>div.login_and_register_content_card{
+    position: relative;
+    flex: 6;
+    width: 100%;
+}
+
+div.login_and_register_card>div.login_and_register_content_card>div{
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    transform: translateX(0);
+    transition: all 0.5s;
+}
+
+div.login_and_register_card>div.login_and_register_content_card>div>input{
+    display: block;
+    margin: 30px auto;
+    width: 70%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #d09661;
+    background-color: #FCFAE3;
+    outline: none;
+    color: #d09661;
+}
+
+div.login_and_register_card>div.login_and_register_content_card>div>input[type=button]{
+    border: 1px solid #d09661;
+    border-radius: 10px;
+    width: 60%;
+    padding: 10px 0;
+    background-color: #F1E3A7;
+}
+
+div.login_and_register_card>div.login_and_register_content_card>div>input[type=button]:hover{
+    cursor: pointer;
+}
+
+div.login_and_register_card>div.login_and_register_content_card>div.login_content_card_out{
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+div.login_and_register_card>div.login_and_register_content_card>div.register_content_card{
+    opacity: 0;
+    transform: translateX(100%);
+}

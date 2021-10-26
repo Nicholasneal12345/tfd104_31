@@ -3,6 +3,7 @@
     <head lang="zh-tw">
         <meta charset="UTF-8">
         <title>商品分類</title>
+        <link href="../css/login_and_register.css" rel="stylesheet">
         <link href="../css/banner_header.css" rel="stylesheet">
         <link href="../css/question.css" rel="stylesheet">
         <link href="../css/footer.css" rel="stylesheet">
@@ -18,6 +19,28 @@
         <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
     </head>
     <body>
+        <!-- 登入和註冊頁面 -->
+        <div class="login_and_register_card">
+            <div class="login_and_register_title_card">
+                <p>登入</p>
+                <p>註冊</p>
+                <div class="login_title"></div>
+            </div>
+            <div class="login_and_register_content_card">
+                <div class="login_and_register_content_item">
+                    <input type="email" placeholder="請輸入信箱...">
+                    <input type="password" placeholder="請輸入密碼...">
+                    <input type="button" value="登入">
+                </div>
+                <div class="login_and_register_content_item register_content_card">
+                    <input type="email" placeholder="請輸入信箱...">
+                    <input type="password" placeholder="請輸入密碼...">
+                    <input type="text" placeholder="請再輸入一次確認密碼...">
+                    <div></div>  <!-- 這裡做一個icon來設定是否隱藏確認密碼 -->
+                    <input type="button" value="登入">
+                </div>
+            </div>
+        </div>
         <div class="all_div">
             <!-- banner&header -->
             <div class="banner_div">
@@ -183,6 +206,7 @@
                 </div>
             </div>
         </div>
+        <script src="../js/login_and_register.js"></script>
         <script src="../js/banner_header.js"></script>
         <script src="../js/footer.js"></script>
     </body>
