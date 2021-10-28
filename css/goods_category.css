@@ -1,4 +1,39 @@
 
+/* products_condition_card */
+div.products_condition_card{
+    display: flex;
+    margin: 50px 0;
+}
+
+div.products_condition_card>div.products_condition_item_left{
+    flex: 1;
+}
+
+div.products_condition_card>div.products_condition_item_right{
+    flex: 4;
+    padding-left:73px;
+}
+
+div.products_condition_card>div.products_condition_item_right>input{
+    vertical-align: bottom;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #d09661;
+    outline: none;
+}
+
+div.products_condition_card>div.products_condition_item_right>div{
+    display: inline-block;
+    text-align: right;
+    width: 600px;
+    vertical-align: bottom;
+}
+
+div.products_condition_card>div.products_condition_item_right>div>P{
+    margin: 0 50px 0 0px;
+}
+
 /* goods_category_content_card */
 div.goods_category_content_card{
     display: flex;
@@ -6,175 +41,56 @@ div.goods_category_content_card{
 }
 
 /* 商品條件選擇 */
+div.goods_selection_card{
+    flex: 1;
+}
 
-h2.goods_selection_title{
+div.goods_selection_card>ul{
+    padding-left: 16px;
+    margin-top: 0;
     color: #d09661;
-    text-align: center;
-    margin: 100px 0;
+    position: sticky;
+    top: 0;
 }
 
-div.goods_selection_selected_condition{
-    position: absolute;
-    top: -20%;
-    width: 200px;
+div.goods_selection_card>ul>li{
+    list-style: none;
+    padding-bottom: 18px;
 }
 
-div.goods_selection_selected_condition>div.goods_selection_selected_condition_item{
-    position: relative;
-    width: 100%;
-    text-align: center;
-    background-color: #ABFF77;
-    border-radius: 5px;
-    display: none;
-}
-
-div.goods_selection_selected_condition>div.goods_selection_selected_condition_item_open{
-    display: block;
-}
-
-div.goods_selection_selected_condition>div.goods_selection_selected_condition_item:hover{
-    cursor: pointer;
-    background-color: #FF6D6D;
-}
-
-div.goods_selection_selected_condition>div.goods_selection_selected_condition_item:hover>div.goods_selection_selected_condition_item_line{
-    display: block;
-}
-
-div.goods_selection_selected_condition>div.goods_selection_selected_condition_item>p{
-    margin: 10px 0;
-    padding: 5px;
-}
-
-div.goods_selection_selected_condition>div.goods_selection_selected_condition_item>div.goods_selection_selected_condition_item_line{
-    position: absolute;
-    top: 50%;
+div.goods_selection_card>ul>li>div{
     width: 100%;
     height: 1px;
-    background-color: black;
-    display: none;
-}
-
-div.goods_selection_card{
-    display: inline-block;
-    width: 200px;
-    background-color: #F1E3A7;
-}
-
-div.goods_selection_condition>ul{
-    padding: 0;
-    margin: 0;
-}
-
-div.goods_selection_condition>ul>li{
-    position: relative;
-}
-
-div.goods_selection_condition>ul>li:hover{
-    cursor: pointer;
-}
-
-div.goods_selection_condition>ul>li>h2{
-    margin: 0 0 0 10px;
-}
-
-div.goods_selection_condition>ul>li>div{
-    width: 100%;
-    height: 3px;
     background-color: #d09661;
 }
 
-div.goods_selection_condition>ul>li>ul{
-    position: absolute;
-    opacity: 0;
-    padding: 0;
-    width: 100%;
-    transform: translateY(-400%);
-    transition: all 0.5s;
+div.goods_selection_card>ul>li>a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #d09661;
+    text-decoration: none;
 }
 
-div.goods_selection_condition>ul>li>ul:hover{
-    cursor: auto;
+div.goods_selection_card>ul>li>ul>li{
+    list-style: none;
+    padding: 7px 0 0 0;
 }
 
-div.goods_selection_condition>ul>li>ul.goods_selection_condition_title1_checked{
-    position: relative;
-    opacity: 1;
-    transform: translateY(0);
-    text-align: start;
-    background-color: #FCFAE3;
-    padding: 10px 0;    
-}
-
-div.goods_selection_condition>ul>li>ul.goods_selection_condition_title2_checked{
-    position: relative;
-    opacity: 1;
-    transform: translateY(0);
-    text-align: start;
-    background-color: #FCFAE3;
-    padding: 10px 0;    
-}
-
-div.goods_selection_condition>ul>li>ul>li{
-    text-align: start;
-    background-color: #FCFAE3;
-    padding: 10px 0;   
-}
-
-
-div.goods_selection_condition>ul>li>ul>li>p{
-    display: inline-block;
-    margin: 0;
-}
-
-div.goods_selection_condition>ul>li>ul>li>p:hover{
-    cursor: pointer;
-}
-
-div.goods_selection_condition>ul>li>ul>li>div.goods_selection_price_checkbox{
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    margin-left: 20px;
-    border: 1px solid;
-}
-
-div.goods_selection_condition>ul>li>ul>li>div.goods_selection_mood_checkbox{
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    margin-left: 20px;
-    border: 1px solid;
-}
-
-div.goods_selection_condition>ul>li>ul>li>div.goods_selection_price_checkbox:hover{
-    cursor: pointer;
-    background-color: #F1E3A7;
-}
-
-div.goods_selection_condition>ul>li>ul>li>div.goods_selection_mood_checkbox:hover{
-    cursor: pointer;
-    background-color: #F1E3A7;
-}
-
-div.goods_selection_condition>ul>li>ul>li>div.goods_selection_price_checkbox_checked{
-    background-color: #d09661;
-}
-
-div.goods_selection_condition>ul>li>ul>li>div.goods_selection_mood_checkbox_checked{
-    background-color: #d09661;
+div.goods_selection_card>ul>li>ul>li>a{
+    color: #d09661;
+    text-decoration: none;
 }
 
 
 /* 商品預覽 */
 div.product_preview_card{
+    flex: 5;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-left: 100px;
     margin-bottom: 300px;
+    background-color: rgba(241, 227, 167, 0.8);
 }
 
 div.product_preview_card>div.product_preview_item{

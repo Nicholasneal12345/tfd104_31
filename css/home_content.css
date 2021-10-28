@@ -124,6 +124,8 @@ div.latest_new_card>div.latest_new_item{
     transition: 1s;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
 }
 
 div.latest_new_card>div.latest_new_item:hover{
@@ -293,7 +295,7 @@ div.about_card{
 div.about_card>div.about_content{
     position: absolute;
     text-align: center;
-    color: black;
+    color: white;
     transform: translateY(-150%);
     width: 100%;
 }
@@ -315,7 +317,7 @@ div.about_card>div.about_content>h1:hover{
 }
 
 div.about_card>div.about_content>p:hover{
-    color: white;
+    color: #d09661;
 }
 
 div.about_card>div.about_content>button.about_content_button{
