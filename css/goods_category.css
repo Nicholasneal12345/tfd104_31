@@ -84,11 +84,11 @@ div.goods_selection_card>ul>li>ul>li>a{
 
 /* 商品預覽 */
 div.product_preview_card{
-    flex: 5;
+    flex: 4;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-left: 100px;
+    margin-left: 70px;
     margin-bottom: 300px;
     background-color: rgba(241, 227, 167, 0.8);
 }

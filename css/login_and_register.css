@@ -11,6 +11,7 @@ div.login_and_register_card{
     text-align: center;
     background-color: #FCFAE3;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 div.login_and_register_card_open{
