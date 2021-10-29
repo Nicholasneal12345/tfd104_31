@@ -224,7 +224,7 @@ div.appointment_store_card{
     justify-content: space-around;
 }
 
-div.appointment_store_card>div.appointment{
+div.appointment_store_card>a>div.appointment{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,18 +236,18 @@ div.appointment_store_card>div.appointment{
     overflow: hidden;
 }
 
-div.appointment_store_card>div.appointment>img{
+div.appointment_store_card>a>div.appointment>img{
     position: absolute;
     width: 100%;
     height: 100%;
     transform: translateY(0);   
 }
 
-div.appointment_store_card>div.appointment:hover{
+div.appointment_store_card>a>div.appointment:hover{
     cursor: pointer;
 }
 
-div.appointment_store_card>div.appointment:hover>img{
+div.appointment_store_card>a>div.appointment:hover>img{
     cursor: pointer;
     transform: translateY(-100%);
     transition: transform 1s;

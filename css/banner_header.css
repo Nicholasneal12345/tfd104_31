@@ -23,7 +23,7 @@ a.logo{
 
 /* header ul&li */
 div.header_div{
-    background-color: #F1E3A7;
+    background-color: #FCFAE3;
 }
 
 ul.left_ul{
@@ -49,8 +49,8 @@ ul.left_ul>li>a{
 }
 
 ul.left_ul>li:hover>a{
-    color: #d09661;
-    text-decoration: underline #d09661;
+    color: black;
+    text-decoration: underline black;
 }
 
 ul.left_ul>li>ul{
@@ -89,7 +89,7 @@ ul.left_ul>li>ul>li:hover{
 
 ul.left_ul>li>ul>li:hover>a{
     font-size: 24px;
-    color: #d09661;
+    color: black;
 }
 
 ul.right_ul{
@@ -113,8 +113,8 @@ ul.right_ul>li>a{
 }
 
 ul.right_ul>li>a:hover{
-    color: #d09661;
-    text-decoration: underline #d09661;
+    color: black;
+    text-decoration: underline black;
 }
 
 ul.ul_fixed{
@@ -127,8 +127,8 @@ ul.ul_fixed>li>a{
     transition: color 2s;
 }
 ul>li>a.header_li_a_clicked{
-    color: #d09661;
-    text-decoration: underline #d09661;
+    color: black;
+    text-decoration: underline black;
 }
 
 
