@@ -12,6 +12,11 @@ let left_ul_fixed=document.getElementsByClassName("left_ul")[0];
 let right_ul_fixed=document.getElementsByClassName("right_ul")[0];
 // 返回頂部按鈕
 let return_to_top=document.getElementsByClassName("return_to_top")[0];
+// slider_img
+let slider_img_item=document.getElementsByClassName("slider_img_item");//圖片的dom，總共有4個
+let slider_img_bottom=document.getElementsByClassName("slider_img_bottom");//底下的按鈕，總共有4個
+let slider_img_next=document.getElementsByClassName("slider_img_next")[0];//右按鈕
+let slider_img_previous=document.getElementsByClassName("slider_img_previous")[0];//左按鈕
 
 
 
@@ -55,3 +60,202 @@ window.addEventListener("scroll", ()=>{
     
 })
 
+// slider_img
+let time=30000;
+
+(function(){
+
+    let i=40000;//為了解決負數的問題暫時將初始直射的大一點;
+
+    slider_img_previous.addEventListener("click", ()=>{
+        clearInterval(slider_run);
+        i=i-1;
+        if(i%4===0){
+            slider_img_bottom[0].style.backgroundColor=`#d09661`;
+            slider_img_bottom[1].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[2].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[3].style.backgroundColor=`#FCFAE3`;
+            slider_img_item[0].style.transform=`translate(0 0)`;
+            slider_img_item[0].style.zIndex=0;
+            slider_img_item[1].style.transform=`translate(0, 0)`;
+            slider_img_item[1].style.zIndex=1;
+            slider_img_item[2].style.transform=`translate(0, 0)`;
+            slider_img_item[2].style.zIndex=0;
+            slider_img_item[3].style.transform=`translate(0, 0)`;
+            slider_img_item[3].style.zIndex=-1;
+        }
+        else if(i%4===1){
+            slider_img_bottom[0].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[1].style.backgroundColor=`#d09661`;
+            slider_img_bottom[2].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[3].style.backgroundColor=`#FCFAE3`;
+            slider_img_item[0].style.transform=`translate(100%, 0)`;
+            slider_img_item[0].style.zIndex=-1;
+            slider_img_item[1].style.transform=`translate(-100%, 0)`;
+            slider_img_item[1].style.zIndex=0;
+            slider_img_item[2].style.transform=`translate(-100%, 0)`;
+            slider_img_item[2].style.zIndex=1;
+            slider_img_item[3].style.transform=`translate(100%, 0)`;
+            slider_img_item[3].style.zIndex=0;
+        }
+        else if(i%4===2){
+            slider_img_bottom[0].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[1].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[2].style.backgroundColor=`#d09661`;
+            slider_img_bottom[3].style.backgroundColor=`#FCFAE3`;
+            slider_img_item[0].style.transform=`translate(200%, 0)`;
+            slider_img_item[0].style.zIndex=0;
+            slider_img_item[1].style.transform=`translate(0, 0)`;
+            slider_img_item[1].style.zIndex=-1;
+            slider_img_item[2].style.transform=`translate(-200%, 0)`;
+            slider_img_item[2].style.zIndex=0;
+            slider_img_item[3].style.transform=`translate(0, 0)`;
+            slider_img_item[3].style.zIndex=1;
+        }
+        else if(i%4===3){
+            slider_img_bottom[0].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[1].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[2].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[3].style.backgroundColor=`#d09661`;
+            slider_img_item[0].style.transform=`translate(100%, 0)`;
+            slider_img_item[0].style.zIndex=1;
+            slider_img_item[1].style.transform=`translate(100%, 0)`;
+            slider_img_item[1].style.zIndex=0;
+            slider_img_item[2].style.transform=`translate(-100%, 0)`;
+            slider_img_item[2].style.zIndex=-1;
+            slider_img_item[3].style.transform=`translate(-100%, 0)`;
+            slider_img_item[3].style.zIndex=0;
+        }
+        slider_run();
+    })
+
+    slider_img_next.addEventListener("click", ()=>{
+        clearInterval(slider_run);
+        i=i+1;
+        if(i%4===0){
+            slider_img_bottom[0].style.backgroundColor=`#d09661`;
+            slider_img_bottom[1].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[2].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[3].style.backgroundColor=`#FCFAE3`;
+            slider_img_item[0].style.transform=`translate(0 0)`;
+            slider_img_item[0].style.zIndex=0;
+            slider_img_item[1].style.transform=`translate(0, 0)`;
+            slider_img_item[1].style.zIndex=1;
+            slider_img_item[2].style.transform=`translate(0, 0)`;
+            slider_img_item[2].style.zIndex=0;
+            slider_img_item[3].style.transform=`translate(0, 0)`;
+            slider_img_item[3].style.zIndex=-1;
+        }
+        else if(i%4===1){
+            slider_img_bottom[0].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[1].style.backgroundColor=`#d09661`;
+            slider_img_bottom[2].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[3].style.backgroundColor=`#FCFAE3`;
+            slider_img_item[0].style.transform=`translate(100%, 0)`;
+            slider_img_item[0].style.zIndex=-1;
+            slider_img_item[1].style.transform=`translate(-100%, 0)`;
+            slider_img_item[1].style.zIndex=0;
+            slider_img_item[2].style.transform=`translate(-100%, 0)`;
+            slider_img_item[2].style.zIndex=1;
+            slider_img_item[3].style.transform=`translate(100%, 0)`;
+            slider_img_item[3].style.zIndex=0;
+        }
+        else if(i%4===2){
+            slider_img_bottom[0].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[1].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[2].style.backgroundColor=`#d09661`;
+            slider_img_bottom[3].style.backgroundColor=`#FCFAE3`;
+            slider_img_item[0].style.transform=`translate(200%, 0)`;
+            slider_img_item[0].style.zIndex=0;
+            slider_img_item[1].style.transform=`translate(0, 0)`;
+            slider_img_item[1].style.zIndex=-1;
+            slider_img_item[2].style.transform=`translate(-200%, 0)`;
+            slider_img_item[2].style.zIndex=0;
+            slider_img_item[3].style.transform=`translate(0, 0)`;
+            slider_img_item[3].style.zIndex=1;
+        }
+        else if(i%4===3){
+            slider_img_bottom[0].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[1].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[2].style.backgroundColor=`#FCFAE3`;
+            slider_img_bottom[3].style.backgroundColor=`#d09661`;
+            slider_img_item[0].style.transform=`translate(100%, 0)`;
+            slider_img_item[0].style.zIndex=1;
+            slider_img_item[1].style.transform=`translate(100%, 0)`;
+            slider_img_item[1].style.zIndex=0;
+            slider_img_item[2].style.transform=`translate(-100%, 0)`;
+            slider_img_item[2].style.zIndex=-1;
+            slider_img_item[3].style.transform=`translate(-100%, 0)`;
+            slider_img_item[3].style.zIndex=0;
+        }
+        slider_run();
+    })
+
+    let slider_run=setInterval(function(){
+        i=i+1;
+        for(let j=0; j<4; j=j+1){
+            if(i%4===0){
+                slider_img_bottom[0].style.backgroundColor=`#d09661`;
+                slider_img_bottom[1].style.backgroundColor=`#FCFAE3`;
+                slider_img_bottom[2].style.backgroundColor=`#FCFAE3`;
+                slider_img_bottom[3].style.backgroundColor=`#FCFAE3`;
+                slider_img_item[0].style.transform=`translate(0 0)`;
+                slider_img_item[0].style.zIndex=0;
+                slider_img_item[1].style.transform=`translate(0, 0)`;
+                slider_img_item[1].style.zIndex=1;
+                slider_img_item[2].style.transform=`translate(0, 0)`;
+                slider_img_item[2].style.zIndex=0;
+                slider_img_item[3].style.transform=`translate(0, 0)`;
+                slider_img_item[3].style.zIndex=-1;
+            }
+            else if(i%4===1){
+                slider_img_bottom[0].style.backgroundColor=`#FCFAE3`;
+                slider_img_bottom[1].style.backgroundColor=`#d09661`;
+                slider_img_bottom[2].style.backgroundColor=`#FCFAE3`;
+                slider_img_bottom[3].style.backgroundColor=`#FCFAE3`;
+                slider_img_item[0].style.transform=`translate(100%, 0)`;
+                slider_img_item[0].style.zIndex=-1;
+                slider_img_item[1].style.transform=`translate(-100%, 0)`;
+                slider_img_item[1].style.zIndex=0;
+                slider_img_item[2].style.transform=`translate(-100%, 0)`;
+                slider_img_item[2].style.zIndex=1;
+                slider_img_item[3].style.transform=`translate(100%, 0)`;
+                slider_img_item[3].style.zIndex=0;
+            }
+            else if(i%4===2){
+                slider_img_bottom[0].style.backgroundColor=`#FCFAE3`;
+                slider_img_bottom[1].style.backgroundColor=`#FCFAE3`;
+                slider_img_bottom[2].style.backgroundColor=`#d09661`;
+                slider_img_bottom[3].style.backgroundColor=`#FCFAE3`;
+                slider_img_item[0].style.transform=`translate(200%, 0)`;
+                slider_img_item[0].style.zIndex=0;
+                slider_img_item[1].style.transform=`translate(0, 0)`;
+                slider_img_item[1].style.zIndex=-1;
+                slider_img_item[2].style.transform=`translate(-200%, 0)`;
+                slider_img_item[2].style.zIndex=0;
+                slider_img_item[3].style.transform=`translate(0, 0)`;
+                slider_img_item[3].style.zIndex=1;
+            }
+            else if(i%4===3){
+                slider_img_bottom[0].style.backgroundColor=`#FCFAE3`;
+                slider_img_bottom[1].style.backgroundColor=`#FCFAE3`;
+                slider_img_bottom[2].style.backgroundColor=`#FCFAE3`;
+                slider_img_bottom[3].style.backgroundColor=`#d09661`;
+                slider_img_item[0].style.transform=`translate(100%, 0)`;
+                slider_img_item[0].style.zIndex=1;
+                slider_img_item[1].style.transform=`translate(100%, 0)`;
+                slider_img_item[1].style.zIndex=0;
+                slider_img_item[2].style.transform=`translate(-100%, 0)`;
+                slider_img_item[2].style.zIndex=-1;
+                slider_img_item[3].style.transform=`translate(-100%, 0)`;
+                slider_img_item[3].style.zIndex=0;
+            }
+        }
+    }, 5000)
+})();
+
+slider_img_item[1].style.zIndex=1;
+slider_img_item[3].style.zIndex=-1;
+// slider_img_item[0].style.transform=`translateZ(100px)`
+
+console.log(slider_img_item[1].style);

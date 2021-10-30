@@ -8,7 +8,7 @@ div.all_div_closed{
     opacity: 0.5;
 }
 
-/* div.banner_div */
+/* div.header_div */
 div.header_div{
     display: flex;
     width: 100%;
@@ -208,6 +208,92 @@ div.hambuger_list>div.rotate_3{
 }
 
 /* banner輪播圖 */
+ul.slider_img_card{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+    perspective: 250px;
+    overflow: hidden;
+}
+
+ul.slider_img_card>li{
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+
+ul.slider_img_card>li:nth-child(1){
+    background-color: red;
+    left: -100%;
+}
+
+ul.slider_img_card>li:nth-child(2){
+    background-color: green;
+    left: 0%;
+}
+
+ul.slider_img_card>li:nth-child(3){
+    background-color: orange;
+    left: 100%;
+}
+
+ul.slider_img_card>li:nth-child(4){
+    background-color: blue;
+    left: 0;
+}
+
+div.slider_img_next{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: black;
+}
+
+div.slider_img_previous{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: black;
+}
+
+div.slider_img_bottom_card{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0%;
+    z-index: 1;
+}
+
+div.slider_img_bottom_card>div{
+    display: inline-block;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FCFAE3;
+    transition: all 1s ease-in-out;
+}
+
+div.slider_img_bottom_card>div:first-child{
+    background-color: #d09661;
+}
 
 /* 返回上層按鈕 */
 div.return_to_top{
