@@ -68,7 +68,6 @@ let time=30000;
     let i=40000;//為了解決負數的問題暫時將初始直射的大一點;
 
     slider_img_previous.addEventListener("click", ()=>{
-        clearInterval(slider_run);
         i=i-1;
         if(i%4===0){
             slider_img_bottom[0].style.backgroundColor=`#d09661`;
@@ -125,12 +124,10 @@ let time=30000;
             slider_img_item[2].style.zIndex=-1;
             slider_img_item[3].style.transform=`translate(-100%, 0)`;
             slider_img_item[3].style.zIndex=0;
-        }
-        slider_run();
+        }     
     })
 
     slider_img_next.addEventListener("click", ()=>{
-        clearInterval(slider_run);
         i=i+1;
         if(i%4===0){
             slider_img_bottom[0].style.backgroundColor=`#d09661`;
@@ -188,7 +185,6 @@ let time=30000;
             slider_img_item[3].style.transform=`translate(-100%, 0)`;
             slider_img_item[3].style.zIndex=0;
         }
-        slider_run();
     })
 
     let slider_run=setInterval(function(){
@@ -251,7 +247,7 @@ let time=30000;
                 slider_img_item[3].style.zIndex=0;
             }
         }
-    }, 5000)
+    }, 30000)
 })();
 
 slider_img_item[1].style.zIndex=1;
