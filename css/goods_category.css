@@ -74,13 +74,12 @@ div.goods_selection_card>ul>li>a{
 div.goods_selection_card>ul>li>ul>li{
     list-style: none;
     padding: 7px 0 0 0;
-}
-
-div.goods_selection_card>ul>li>ul>li>a{
     color: #d09661;
-    text-decoration: none;
 }
 
+div.goods_selection_card>ul>li>ul>li:hover{
+    cursor: pointer;
+}
 
 /* 商品預覽 */
 div.product_preview_card{
@@ -149,4 +148,9 @@ div.product_preview_card>div.product_preview_item>div.product_preview_item_conte
 
 div.product_preview_card>div.product_preview_item>div.product_preview_item_content>div.product_preview_item_content_button:hover{
     cursor: pointer;
+}
+
+div.product_preview_card>div.product_preview_item>div.product_preview_item_content>div.product_preview_item_content_button>a{
+    text-decoration: none;
+    color: #d09661;
 }

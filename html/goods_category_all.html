@@ -160,7 +160,7 @@
                 </ul>
             </div>
             <!-- 條件選擇功能 -->
-            <h1 style="text-align: center; margin-top: 300px; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>適合部位&gt;&gt;頭</h1>
+            <h1 style="text-align: center; margin-top: 300px; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>全部商品</h1>
             <div class="products_condition_card">
                 <div class="products_condition_item_left"></div>
                 <div class="products_condition_item_right">
@@ -177,6 +177,7 @@
                     </div>
                 </div>
             </div>
+            <!-- 商品分類 -->
             <div class="goods_category_content_card">
                 <div class="goods_selection_card">
                     <ul>
@@ -188,39 +189,21 @@
                             <a href="#">適合身體部位</a>
                             <div></div>
                             <ul class="goods_selection_title2_item_card">
-                                <li>
-                                    <a href="#">臉</a>
-                                </li>
-                                <li>
-                                    <a href="#">頭</a>
-                                </li>
-                                <li>
-                                    <a href="#">身體</a>
-                                </li>
+                                <li id="face">臉</li>
+                                <li id="head">頭</li>
+                                <li id="body">身體</li>
                             </ul>
                         </li>
                         <li class="goods_selection_title2">
                             <a href="#">產地</a>
                             <div></div>
                             <ul class="goods_selection_title2_item_card">
-                                <li>
-                                    <a href="#">美國</a>
-                                </li>
-                                <li>
-                                    <a href="#">法國</a>
-                                </li>
-                                <li>
-                                    <a href="#">菲律賓</a>
-                                </li>
-                                <li>
-                                    <a href="#">波蘭</a>
-                                </li>
-                                <li>
-                                    <a href="#">台灣</a>
-                                </li>
-                                <li>
-                                    <a href="#">印度</a>
-                                </li>
+                                <li id="USA">美國</li>
+                                <li id="France">法國</li>
+                                <li id="Philippines">菲律賓</li>
+                                <li id="Poland">波蘭</li>
+                                <li id="Taiwan">台灣</li>
+                                <li id="India">印度</li>
                             </ul>
                         </li>
                     </ul>
@@ -229,85 +212,253 @@
                 <div class="product_preview_card">
                     <div class="product_preview_item">
                         <div class="product_preview_item_img">
-                            <img src="../image/商品圖片/燕麥+杏仁香皂.png" alt="燕麥+杏仁香皂">
+                            <img src="../image/商品圖片/cow肥皂.png" alt="cow肥皂">
                         </div>
                         <div class="product_preview_item_content">
-                            <h2 style="margin: 30px 0;">燕麥+杏仁香皂</h2>
-                            <p>美國原裝進口</p>
-                            <p>含燕麥及滋潤成分</p>
+                            <h2 style="margin: 30px 0;">cow肥皂</h2>
+                            <p>日本原裝進口</p>
+                            <p>含牛乳成份</p>
                             <p>細微顆粒溫和去除角質</p>
-                            <div class="product_preview_item_content_button">
-                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                            <div class="product_preview_item_content_button" id="cow_soap">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
                             </div>
                         </div>
                     </div>
                     <div class="product_preview_item">
                         <div class="product_preview_item_img">
-                            <img src="../image/商品圖片/薰衣草保濕香皂.png" alt="薰衣草保濕香皂">
+                            <img src="../image/商品圖片/medimix肥皂.png" alt="medimix肥皂">
                         </div>
                         <div class="product_preview_item_content">
-                            <h2 style="margin: 30px 0;">薰衣草保濕香皂</h2>
-                            <p>美國原裝進口</p>
-                            <p>含豐富水嫩因子</p>
-                            <p>溫和洗淨不緊繃</p>
-                            <div class="product_preview_item_content_button">
-                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                            <h2 style="margin: 30px 0;">medimix肥皂</h2>
+                            <p>印度原裝進口</p>
+                            <p>印度皇室藥草浴肥皂</p>
+                            <p>保濕、煥白、極淨清潔</p>
+                            <div class="product_preview_item_content_button" id="medimix_soap">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
                             </div>
                         </div>
                     </div>
                     <div class="product_preview_item">
                         <div class="product_preview_item_img">
-                            <img src="../image/商品圖片/亮彩冷壓香皂.png" alt="亮彩冷壓香皂">
+                            <img src="../image/商品圖片/乳霜肥皂.png" alt="乳霜肥皂">
                         </div>
                         <div class="product_preview_item_content">
-                            <h2 style="margin: 30px 0;">亮彩冷壓香皂</h2>
-                            <p>菲律賓原裝進口</p>
-                            <p>無油商品</p>
-                            <p>不含對羥基苯甲酸酯</p>
+                            <h2 style="margin: 30px 0;">乳霜肥皂</h2>
+                            <p>波蘭原裝進口</p>
+                            <p>不含動物成分</p>
+                            <p>蘊含棕櫚油、棕櫚仁油、甘油有效清潔肌膚</p>
                             <div class="product_preview_item_content_button">
-                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
                             </div>
                         </div>
                     </div>
                     <div class="product_preview_item">
                         <div class="product_preview_item_img">
-                            <img src="../image/商品圖片/愛馬仕_橘綠之泉香皂.png" alt="愛馬仕_橘綠之泉香皂">
+                            <img src="../image/商品圖片/施巴嬰兒潔膚皂.png" alt="施巴嬰兒潔膚皂">
                         </div>
                         <div class="product_preview_item_content">
-                            <h2 style="margin: 30px 0;">愛馬仕_橘綠之泉香皂</h2>
-                            <p>法國原裝進口</p>
-                            <p>香味持久</p>
-                            <p>洗後不乾澀</p>
+                            <h2 style="margin: 30px 0;">施巴嬰兒潔膚皂</h2>
+                            <p>德國原裝進口</p>
+                            <p>小麥胚芽萃取</p>
+                            <p>不含皂鹼，洗後不乾澀</p>
                             <div class="product_preview_item_content_button">
-                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
                             </div>
                         </div>
                     </div>
                     <div class="product_preview_item">
                         <div class="product_preview_item_img">
-                            <img src="../image/商品圖片/蘆薈+酪梨香皂.png" alt="蘆薈+酪梨香皂">
+                            <img src="../image/商品圖片/施巴潔膚皂.png" alt="施巴潔膚皂">
                         </div>
                         <div class="product_preview_item_content">
-                            <h2 style="margin: 30px 0;">蘆薈+酪梨香皂</h2>
-                            <p>美國原裝進口</p>
-                            <p>含酪梨油及橄欖油成份</p>
-                            <p>溫和洗淨不緊繃</p>
+                            <h2 style="margin: 30px 0;">施巴潔膚皂</h2>
+                            <p>德國原裝進口</p>
+                            <p>敏感/中性/油性/混合膚質使用</p>
+                            <p>清潔、舒敏、保濕</p>
                             <div class="product_preview_item_content_button">
-                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
                             </div>
                         </div>
                     </div>
                     <div class="product_preview_item">
                         <div class="product_preview_item_img">
-                            <img src="../image/商品圖片/愛馬仕_橘采星光香皂.png" alt="愛馬仕_橘采星光香皂">
+                            <img src="../image/商品圖片/歐洲Barwa奢華SPA白麝香香氛皂.png" alt="歐洲Barwa奢華SPA白麝香香氛皂">
                         </div>
                         <div class="product_preview_item_content">
-                            <h2 style="margin: 30px 0;">愛馬仕_橘采星光香皂</h2>
-                            <p>法國原裝進口</p>
-                            <p>女性香水</p>
-                            <p>保存在室溫下即可</p>
+                            <h2 style="margin: 30px 0;">歐洲Barwa奢華SPA白麝香香氛皂</h2>
+                            <p>波蘭原裝進口</p>
+                            <p>精緻質感奢華香氛</p>
+                            <p>洗後滋潤同時撫慰心靈</p>
                             <div class="product_preview_item_content_button">
-                                <p style="line-height: 50px; margin: 0;">前往查看</p>
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/歐洲Barwa奢華SPA綠橄欖香氛皂.png" alt="歐洲Barwa奢華SPA綠橄欖香氛皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">歐洲Barwa奢華SPA綠橄欖香氛皂</h2>
+                            <p>波蘭原裝進口</p>
+                            <p>精緻質感奢華香氛</p>
+                            <p>獨家調配迷人香氣</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/歐洲Barwa奢華SPA雪松香氛皂.png" alt="歐洲Barwa奢華SPA雪松香氛皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">歐洲Barwa奢華SPA雪松香氛皂</h2>
+                            <p>波蘭原裝進口</p>
+                            <p>精緻質感奢華香氛</p>
+                            <p>獨家調配迷人香氣</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/歐洲Barwa奢華SPA黑蘭花香氛皂.png" alt="歐洲Barwa奢華SPA黑蘭花香氛皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">歐洲Barwa奢華SPA黑蘭花香氛皂</h2>
+                            <p>波蘭原裝進口</p>
+                            <p>精緻質感奢華香氛</p>
+                            <p>獨家調配迷人香氣</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/歐洲Barwa高效舒敏天然皂.png" alt="歐洲Barwa高效舒敏天然皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">歐洲Barwa高效舒敏天然皂</h2>
+                            <p>波蘭原裝進口</p>
+                            <p>素食友善配方</p>
+                            <p>溫和親膚不刺激</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/洋甘菊肥皂.png" alt="洋甘菊肥皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">洋甘菊肥皂</h2>
+                            <p>波蘭原裝進口</p>
+                            <p>富含洋甘菊提取物</p>
+                            <p>無動物性實驗</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/綠橄欖肥皂.png" alt="綠橄欖肥皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">綠橄欖肥皂</h2>
+                            <p>波蘭原裝進口</p>
+                            <p>不含動物成分</p>
+                            <p>有效潔淨肌膚</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/義大利Florinda寵愛芍藥香氛植皂.png" alt="義大利Florinda寵愛芍藥香氛植皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">義大利Florinda寵愛芍藥香氛植皂</h2>
+                            <p>義大利原裝進口</p>
+                            <p>使用3%高品質香水</p>
+                            <p>自然植物基底成分</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/義大利Florinda沁甜杏花香氛植皂.png" alt="義大利Florinda沁甜杏花香氛植皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">義大利Florinda沁甜杏花香氛植皂</h2>
+                            <p>義大利原裝進口</p>
+                            <p>使用3%高品質香水</p>
+                            <p>自然植物基底成分</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/義大利Florinda薰衣草舒眠香氛植皂.png" alt="義大利Florinda薰衣草舒眠香氛植皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">義大利Florinda薰衣草舒眠香氛植皂</h2>
+                            <p>義大利原裝進口</p>
+                            <p>使用3%高品質香水</p>
+                            <p>自然植物基底成分</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/義大利Florinda金雀花優雅香氛植皂.png" alt="義大利Florinda金雀花優雅香氛植皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">義大利Florinda金雀花優雅香氛植皂</h2>
+                            <p>義大利原裝進口</p>
+                            <p>使用3%高品質香水</p>
+                            <p>自然植物基底成分</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/義大利Florinda雅痞風荳蔻植萃皂.png" alt="義大利Florinda雅痞風荳蔻植萃皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">義大利Florinda雅痞風荳蔻植萃皂</h2>
+                            <p>義大利原裝進口</p>
+                            <p>使用3%高品質香水</p>
+                            <p>自然植物基底成分</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_preview_item">
+                        <div class="product_preview_item_img">
+                            <img src="../image/商品圖片/蜂王艾草山藥肥皂.png" alt="蜂王艾草山藥肥皂">
+                        </div>
+                        <div class="product_preview_item_content">
+                            <h2 style="margin: 30px 0;">蜂王艾草山藥肥皂</h2>
+                            <p>台灣本土產品</p>
+                            <p>添加艾草、山藥、絲瓜萃取液</p>
+                            <p>沐浴、潔面皆宜</p>
+                            <div class="product_preview_item_content_button">
+                                <a href="./product_content.html"><p style="line-height: 50px; margin: 0;">前往查看</p></a>
                             </div>
                         </div>
                     </div>
