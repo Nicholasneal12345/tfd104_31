@@ -1,6 +1,26 @@
 
 // 處理header按過後的事件處理
 let header_li_a=document.getElementsByClassName("header_li_a");
+let face=document.getElementById("face");
+let face_h=document.getElementById("face_h");
+let head=document.getElementById("head");
+let head_h=document.getElementById("head_h");
+let body=document.getElementById("body");
+let body_h=document.getElementById("body_h");
+let Italy=document.getElementById("Italy");
+let Italy_h=document.getElementById("Italy_h");
+let Germany=document.getElementById("Germany");
+let Germany_h=document.getElementById("Germany_h");
+let Poland=document.getElementById("Poland");
+let Poland_h=document.getElementById("Poland_h");
+let Taiwan=document.getElementById("Taiwan");
+let Taiwan_h=document.getElementById("Taiwan_h");
+let India=document.getElementById("India");
+let India_h=document.getElementById("India_h");
+let Japan=document.getElementById("Japan");
+let Japan_h=document.getElementById("Japan_h");
+let all_products_categort_button=[face, face_h, head, head_h, body, body_h, Italy, Italy_h, Germany, Germany_h, Poland, Poland_h,
+    Taiwan, Taiwan_h, India, India_h, Japan, Japan_h];
 // 漢堡條動畫處理
 let hamburger_card=document.getElementsByClassName("hambuger_list")[0];
 // getElementsByClassName會回傳符合的dom到一個新的array裡
@@ -33,6 +53,14 @@ for(let i=0; i<header_li_a.length; i=i+1){
         header_li_a[i].classList.add("header_li_a_clicked");
     })
 }
+
+for(let i=0; i<all_products_categort_button.length; i=i+1){
+    all_products_categort_button[i].addEventListener("click", function(){
+        localStorage.setItem("products_category_id", this.id);
+    })
+}
+
+
 
 // 漢堡條動畫處理
 hamburger_card.addEventListener("click", ()=>{
@@ -253,5 +281,3 @@ let time=30000;
 slider_img_item[1].style.zIndex=1;
 slider_img_item[3].style.zIndex=-1;
 // slider_img_item[0].style.transform=`translateZ(100px)`
-
-console.log(slider_img_item[1].style);
