@@ -21,6 +21,7 @@ let Japan=document.getElementById("Japan");
 let Japan_h=document.getElementById("Japan_h");
 let all_products_categort_button=[face, face_h, head, head_h, body, body_h, Italy, Italy_h, Germany, Germany_h, Poland, Poland_h,
     Taiwan, Taiwan_h, India, India_h, Japan, Japan_h];
+let logo=document.getElementsByClassName("logo")[0];
 // 漢堡條動畫處理
 let hamburger_card=document.getElementsByClassName("hambuger_list")[0];
 // getElementsByClassName會回傳符合的dom到一個新的array裡
@@ -59,7 +60,6 @@ for(let i=0; i<all_products_categort_button.length; i=i+1){
         localStorage.setItem("products_category_id", this.id);
     })
 }
-
 
 
 // 漢堡條動畫處理

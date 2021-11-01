@@ -81,6 +81,10 @@ div.goods_selection_card>ul>li>ul>li:hover{
     cursor: pointer;
 }
 
+div.goods_selection_card>ul>li>ul>li.condition_item_checked{
+    color: #F1E3A7;
+}
+
 /* 商品預覽 */
 div.product_preview_card{
     flex: 4;
