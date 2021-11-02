@@ -1,0 +1,114 @@
+
+/* 購買過程示意圖 */
+div.buy_process_card{
+    display: flex;
+    margin: auto;
+    width: 750px;
+    align-items: center;
+}
+
+div.buy_process_card>div.buy_process_circle{
+    position: relative;
+    flex: 1;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F1E3A7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div.buy_process_card>div.buy_process_circle>h1{
+    color: #d09661;
+}
+
+div.buy_process_card>div.buy_process_circle>p{
+    position: absolute;
+    top: 100%;
+    width: 400%;
+    color: #d09661;
+}
+
+div.buy_process_card>div.buy_process_line{
+    flex: 3;
+    height: 3px;
+    background-color: #F1E3A7;
+}
+
+/* 購物車 */
+div.cart_card{
+    margin: 100px auto;
+    width: 750px;
+    background-color: #FCFAE3;
+    padding: 20px;
+    border: 3px solid #d09661;
+}
+
+div.cart_card>div.cart_title{
+    position: relative;
+    width: inherit;
+    height: 100px;
+    color: #d09661;
+    border-bottom: 1px solid #d09661;
+}
+
+div.cart_card>div.cart_title>h1{
+    display: inline-block;
+}
+
+div.cart_card>div.cart_title>div{
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+div.cart_buy_products_content_and_detail{
+    width: inherit;
+    display: flex;
+}
+
+div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card{
+    flex: 1;
+    margin: 50px 0;
+    display: flex;
+}
+
+div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card>img{
+    width: 150px;
+    height: 150px;
+    flex: 1;
+}
+
+div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card>div.cart_buy_products_content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+div.cart_buy_products_content>p{
+    flex: 1;
+}
+
+div.cart_buy_products_content>div.cart_buy_products_content_count_and_remove{
+    flex: 1;
+}
+
+div.cart_buy_products_content_count_and_remove>button.remove{
+    width: 60px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: 1px solid #d09661;
+    background-color: #F1E3A7;
+    color: #d09661;
+}
+
+div.cart_buy_products_content>div.cart_buy_products_content_price{
+    flex: 1;
+}
+
+div.cart_buy_products_content_and_detail>div.cart_buy_products_detail{
+    flex: 1;
+}

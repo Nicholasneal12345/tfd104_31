@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head lang="zh-tw">
+        <meta charset="UTF-8">
+        <title>商品分類</title>
+        <link href="../css/login_and_register.css" rel="stylesheet">
+        <link href="../css/banner_header.css" rel="stylesheet">
+        <link href="../css/cart.css" rel="stylesheet">
+        <link href="../css/footer.css" rel="stylesheet">
+        <style>
+
+            /* body的margin歸零一定要寫在這邊，因為body自定義的margin是html檔這邊事先寫好的
+            ，寫在外部檔的話會因為優先權的問題而沒辦法歸零 */
+            body{
+                margin: 0px; 
+            }
+
+        </style>
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    </head>
+    <body>
+        <!-- 登入和註冊頁面 -->
+        <div class="login_and_register_card">
+            <div class="login_and_register_title_card">
+                <p>登入</p>
+                <p>註冊</p>
+                <div class="login_title"></div>
+            </div>
+            <div class="login_and_register_content_card">
+                <div class="login_and_register_content_item">
+                    <input type="email" placeholder="請輸入信箱...">
+                    <input type="password" placeholder="請輸入密碼...">
+                    <input type="button" value="登入">
+                </div>
+                <div class="login_and_register_content_item register_content_card">
+                    <input type="email" placeholder="請輸入信箱...">
+                    <input type="password" placeholder="請輸入密碼...">
+                    <input type="text" placeholder="請再輸入一次確認密碼...">
+                    <div></div>  <!-- 這裡做一個icon來設定是否隱藏確認密碼 -->
+                    <input type="button" value="登入">
+                </div>
+            </div>
+        </div>
+        <div class="all_div">
+            <!-- header -->
+            <div class="header_div">
+                <a class="logo" href="./index.html">
+                    <div>
+                        <span class="iconify" data-icon="mdi:bee" style="color: #FFC700; width: 100px; height: 100px;"></span>
+                    </div>
+                </a>
+                <ul class="left_ul">
+                    <li class="body_li">
+                        <a href="./goods_category_all.html" class="header_li_a">適合部位</a>
+                        <ul>
+                            <li id="face"><a href="./goods_category_all.html">臉</a></li>
+                            <li id="head"><a href="./goods_category_all.html">頭</a></li>
+                            <li id="body"><a href="./goods_category_all.html">身體</a></li>
+                        </ul>
+                    </li>
+                    <li class="place_li">
+                        <a href="./goods_category_all.html" class="header_li_a">產地</a>
+                        <ul>
+                            <li id="Italy"><a href="./goods_category_all.html">義大利</a></li>
+                            <li id="Germany"><a href="./goods_category_all.html">德國</a></li>
+                            <li id="Poland"><a href="./goods_category_all.html">波蘭</a></li>
+                            <li id="Taiwan"><a href="./goods_category_all.html">台灣</a></li>
+                            <li id="India"><a href="./goods_category_all.html">印度</a></li>
+                            <li id="Japan"><a href="./goods_category_all.html">日本</a></li>
+                        </ul>
+                    </li>
+                    <li class="about_li"><a href="./about.html" class="header_li_a">關於</a></li>
+                    <li class="ac_li"><a href="#" class="header_li_a">會員專區</a></li>
+                </ul>
+                <ul class="right_ul">
+                    <li class="login_li"><a href="#" class="header_li_a">登入</a></li>
+                    <li class="shop_li"><a href="#" class="header_li_a"><span class="iconify" data-icon="fa-solid:shopping-cart" style="color: #777;" data-height="20"></span></a></li>
+                </ul>
+                <div class="hambuger_list">
+                    <div class="line_1"></div>
+                    <div class="line_2"></div>
+                    <div class="line_3"></div>
+                </div>
+            </div>
+            <!-- banner -->
+            <ul class="slider_img_card">
+                <li class="slider_img_item">
+                    <a href="#">
+                        <div style="background-image: url('../image/banner/banner-3544296_1280.jpg');">
+                            <p>常見問題Q&amp;A</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="slider_img_item">
+                    <a href="#">
+                        <div style="background-image: url('../image/banner/nature-2813487_1280.jpg');">
+                            <p>入春全館8折起，活動時間為3/1-3/17</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="slider_img_item">
+                    <a href="#">
+                        <div style="background-image: url('../image/banner/maple-1079235_1280.jpg');">
+                            <p>入秋全館8折起，活動時間為11/1-11/17</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="slider_img_item">
+                    <a href="#">
+                        <div style="background-image: url('../image/banner/pocket-watch-1637396_1280.jpg');">
+                            <p>如果想要參觀製造過程的話，歡迎線上預約</p>
+                        </div>
+                    </a>
+                </li>
+                <div class="slider_img_next_and_previous_card">
+                    <div class="slider_img_next">
+                        <span class="iconify" data-icon="dashicons:arrow-left-alt2" style="color: #d09661;" data-height="50" data-flip="horizontal,vertical"></span>
+                    </div>
+                    <div class="slider_img_previous">
+                        <span class="iconify" data-icon="dashicons:arrow-left-alt2" style="color: #d09661;" data-height="50" data-flip="vertical"></span>
+                    </div>
+                </div>
+                <div class="slider_img_bottom_card">
+                    <div class="slider_img_bottom"></div>
+                    <div class="slider_img_bottom"></div>
+                    <div class="slider_img_bottom"></div>
+                    <div class="slider_img_bottom"></div>
+                </div>
+            </ul>
+            <!-- 回到上層按鈕 -->
+            <div class="return_to_top">
+                <span class="iconify" data-icon="bx:bxs-up-arrow-circle" style="color: #d09661; width: 50px; height: 50px;"></span>
+            </div>
+            <!-- 漢堡條點擊後出現的頁面 -->
+            <div class="hamburger_content">
+                <ul>
+                    <li>
+                        <a href="./goods_category_all.html">適合部位</a>
+                        <ul>
+                            <li id="face_h"><a href="./product_content.html">臉</a></li>
+                            <li id="head_h"><a href="./product_content.html">頭</a></li>
+                            <li id="body_h"><a href="./product_content.html">身體</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="./goods_category_all.html">產地</a>
+                        <ul>
+                            <li id="Italy_h"><a href="./goods_category_all.html">義大利</a></li>
+                            <li id="Germany_h"><a href="./goods_category_all.html">德國</a></li>
+                            <li id="Poland_h"><a href="./goods_category_all.html">波蘭</a></li>
+                            <li id="Taiwan_h"><a href="./goods_category_all.html">台灣</a></li>
+                            <li id="India_h"><a href="./goods_category_all.html">印度</a></li>
+                            <li id="Japan_h"><a href="./goods_category_all.html">日本</a></li>
+                        </ul>
+                    </li>
+                    <li class="home_li"><a href="./index.html">首頁</a></li>
+                    <li class="about_li"><a href="./about.html">關於</a></li>
+                </ul>
+            </div>
+            <!-- 購物車頁面 -->
+            <h1 class="title" style="text-align: center; margin-top: 300px; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>購物車</h1>
+            <div class="buy_process_card">
+                <div class="buy_process_circle buy_process_circle1">
+                    <h1>1</h1>
+                    <p>確認購物車商品</p>
+                </div>
+                <div class="buy_process_line buy_process_line1"></div>
+                <div class="buy_process_line buy_process_line2"></div>
+                <div class="buy_process_circle buy_process_circle2">
+                    <h1>2</h1>
+                    <p>選擇付款和寄送方式</p>
+                </div>
+                <div class="buy_process_line buy_process_line2"></div>
+                <div class="buy_process_line buy_process_line3"></div>
+                <div class="buy_process_circle buy_process_circle3">
+                    <h1>3</h1>
+                    <p>按下確認後即完成所有手續</p>
+                </div>
+            </div>
+            <div class="cart_card">
+                <div class="cart_title">
+                    <h1>購物車</h1>
+                    <div>清空購物車</div>
+                </div>
+                <div class="cart_buy_products_content_and_detail">
+                    <div class="cart_buy_products_content_card">
+                        <img src="../image/商品圖片/cow肥皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">cow牛乳肥皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <button class="remove">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p style="margin-left: 5px; color: #d09661;">價格：NT100</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart_buy_products_detail"></div>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="footer_card">
+                <h3>聯絡</h3>
+                <div class="footer_line"></div>
+                <ul>
+                    <li class="footer_button" style="background-image: url('../image/按鈕特效背景圖/FCFAE3色碼背景圖.png');">
+                        <a href="#">FACEBOOK</a>
+                    </li>
+                    <li class="footer_button" style="background-image: url('../image/按鈕特效背景圖/FCFAE3色碼背景圖.png');">
+                        <a href="#">GMAIL</a>
+                    </li>
+                </ul>
+                <div class="footer_text" style="display: inline-block;">
+                    <p>本網站為緯育TibaMe前端工程師專業技術養成班第72期學員專題作品，</p>
+                    <p>本平台僅供學習、展示之用。*若有侵權疑慮，</p>
+                    <p>您可以私訊TibaMe前端設計工程師養成班，後續會由專人協助處理。</p>
+                </div>
+                <div class="footer_question">
+                    <a href="./question.html">
+                        <span class="iconify" data-icon="fa-solid:question-circle" style="color: #d09661;"></span>
+                        <h3>常見問題</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="../js/login_and_register.js"></script>
+        <script src="../js/banner_header.js"></script>
+        <script src="../js/footer.js"></script>
+    </body>
+</html>

@@ -94,6 +94,8 @@ div.product_preview_card{
     margin-left: 70px;
     margin-bottom: 300px;
     background-color: rgba(241, 227, 167, 0.8);
+    padding-top: 30px;
+    border-radius: 10px;
 }
 
 div.product_preview_card>div.product_preview_item{
