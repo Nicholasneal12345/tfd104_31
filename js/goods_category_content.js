@@ -15,6 +15,8 @@ let condition_item_unchecked=document.getElementsByClassName("condition_item_unc
 let product_preview_card=document.getElementsByClassName("product_preview_card")[0];
 let product_preview_item_img=document.getElementsByClassName("product_preview_item_img");
 let input_products_condition=document.getElementsByClassName("input_products_condition")[0];
+// 前往商品內頁
+let product_preview_item_content_button=document.getElementsByClassName("product_preview_item_content_button");
 
 
 
@@ -263,3 +265,10 @@ input_products_condition.addEventListener("change", function(){
         }
     }
 })
+
+// 前往商品內頁
+for(let i=0; i<product_preview_item_content_button.length; i=i+1){
+    product_preview_item_content_button[i].addEventListener("click", function(){
+        localStorage.setItem("products_id", this.id);
+    })
+}
