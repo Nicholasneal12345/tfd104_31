@@ -53,6 +53,10 @@ div.cart_card>div.cart_title{
     border-bottom: 1px solid #d09661;
 }
 
+div.clear_cart:hover{
+    cursor: pointer;
+}
+
 div.cart_card>div.cart_title>h1{
     display: inline-block;
 }
@@ -74,12 +78,15 @@ div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card{
     flex: 1;
     margin: 50px 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card>img{
     width: 150px;
     height: 150px;
     flex: 1;
+    border: 1px dashed #d09661;
+    margin-bottom: 20px;
 }
 
 div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card>div.cart_buy_products_content{
@@ -105,10 +112,47 @@ div.cart_buy_products_content_count_and_remove>button.remove{
     color: #d09661;
 }
 
+div.cart_buy_products_content_count_and_remove>button.remove:hover{
+    cursor: pointer;
+}
+
 div.cart_buy_products_content>div.cart_buy_products_content_price{
     flex: 1;
 }
 
-div.cart_buy_products_content_and_detail>div.cart_buy_products_detail{
+/* 明細表 */
+div.cart_buy_products_content_and_detail>div.cart_buy_products_detail_card{
     flex: 1;
+    border: 3px solid #d09661;
+    background-color: #F1E3A7;
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+div.cart_buy_products_detail_card>div.cart_buy_products_detail_title{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d09661;
+}
+
+div.cart_buy_products_detail_card>div.cart_buy_products_detail_content{
+    display: flex;
+    flex-direction: column;
+    color: #d09661;
+    font-size: 12px;
+    border-bottom: 1px solid #d09661;
+}
+
+div.cart_buy_products_detail_card>div.cart_buy_products_detail_content>div.cart_buy_products_detail_content_item{
+    display: flex;;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.cart_buy_products_detail_total_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d09661;
+    font-size: 12px;
 }
