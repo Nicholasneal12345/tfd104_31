@@ -12,6 +12,7 @@ let products_buy_button=document.getElementsByClassName("products_buy_button")[0
 let products_title=document.getElementsByClassName("products_title");
 let products_interview_content=document.getElementsByClassName("products_interview_content")[0];
 let products_adress_content=document.getElementsByClassName("products_adress_content")[0];
+let more_products_card=document.getElementsByClassName("more_products_card")[0];
 
 
 
@@ -244,3 +245,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
     }
 })
+
+function alink(id){
+    localStorage.setItem("products_id", id);
+}

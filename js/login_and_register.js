@@ -37,7 +37,6 @@ document.addEventListener("click", (event)=>{
         all_div.classList.remove("all_div_closed");
         login_and_register_card.classList.remove("login_and_register_card_open");
     }
-    console.log(2, event);
 }, true)
 
 login_li.addEventListener("click", (event)=>{
