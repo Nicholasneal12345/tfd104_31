@@ -243,21 +243,25 @@ Japan_left.addEventListener("click", function(){
 input_products_condition.addEventListener("change", function(){
 
     let match_products_count=0;
+    let value=new RegExp(this.value, "gi");
 
     for(let i=0; i<product_preview_item_img.length; i=i+1){
-        if(product_preview_item_img[i].childNodes[1].alt!==this.value){
+        if(!product_preview_item_img[i].childNodes[1].alt.match(value)){
             product_preview_item[i].style.display="none";
         }
-        else if(product_preview_item_img[i].childNodes[1].alt===this.value){
+        else if(product_preview_item_img[i].childNodes[1].alt.match(value)){
             product_preview_item[i].style.display="inline-block";
             match_products_count=match_products_count+1;
         }
     }
 
-    console.log(match_products_count);
     if(!match_products_count){
-        product_preview_card.insertAdjacentHTML("afterbegin", `<h1 class="new_element" style= 'color: #d09661'>目前沒有收尋到${this.value}的商品</h1>`);
-        console.log(123)
+        if(product_preview_card.innerText){
+            document.getElementsByClassName("new_element")[0].innerText=`目前沒有收尋到${this.value}的商品`;
+        } 
+        else{
+            product_preview_card.insertAdjacentHTML("afterbegin", `<h1 class="new_element" style= 'color: #d09661'>目前沒有收尋到${this.value}的商品</h1>`);
+        } 
     }
     else{
         if(document.getElementsByClassName("new_element")[0]){
