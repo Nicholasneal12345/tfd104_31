@@ -22,14 +22,14 @@ div.products_img_mousemove{
     background-position: calc(var(--x) * 100%) calc(var(--y) * 100%);
 }
 
-div.products_img>div.produncts_price{
+div.products_img>div.products_price{
     background-color: #F1E3A7;
     width: 100px;
     text-align: center;
     border-radius: 0 0 10px;
 }
 
-div.products_img>div.produncts_price>p{
+div.products_img>div.products_price>p{
     margin: 0;
     padding: 5px 0;
     color: #d09661;
