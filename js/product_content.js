@@ -13,6 +13,9 @@ let products_title=document.getElementsByClassName("products_title");
 let products_interview_content=document.getElementsByClassName("products_interview_content")[0];
 let products_adress_content=document.getElementsByClassName("products_adress_content")[0];
 let more_products_card=document.getElementsByClassName("more_products_card")[0];
+// 點擊放入購物車
+let products_price=document.getElementsByClassName("products_price")[0];
+
 
 
 
@@ -83,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function(){
     switch(products_id){
         case "cow_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/cow肥皂.png')";
+            products_img.innerHTML='<div class="products_price" id="45"><p>NT45</p></div>';
             products_title[0].innerText=`產品內頁：cow_牛乳肥皂`;
             products_title[1].innerText="cow_牛乳肥皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>日本原裝進口</p>
@@ -92,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "medimix_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/medimix肥皂.png')";
+            products_img.innerHTML='<div class="products_price" id="89"><p>NT89</p></div>';
             products_title[0].innerText=`產品內頁：Medimix_肥皂`;
             products_title[1].innerText="Medimix_肥皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>保濕、亮白、抗痘、控油、緊緻</p>
@@ -101,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "cream_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/乳霜肥皂.png')";
+            products_img.innerHTML='<div class="products_price" id="49"><p>NT49</p></div>';
             products_title[0].innerText=`產品內頁：乳霜肥皂`;
             products_title[1].innerText="乳霜肥皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>波蘭原裝進口</p>
@@ -110,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "baby_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/施巴嬰兒潔膚皂.png')";
+            products_img.innerHTML='<div class="products_price" id="180"><p>NT180</p></div>';
             products_title[0].innerText=`產品內頁：施巴嬰兒潔膚皂`;
             products_title[1].innerText="施巴嬰兒潔膚皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>德國原裝進口</p>
@@ -119,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "seba_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/施巴潔膚皂.png')";
+            products_img.innerHTML='<div class="products_price" id="198"><p>NT198</p></div>';
             products_title[0].innerText=`產品內頁：施巴潔膚皂`;
             products_title[1].innerText="施巴潔膚皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>德國原裝進口</p>
@@ -128,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "Barwa_white_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/歐洲Barwa奢華SPA白麝香香氛皂.png')";
+            products_img.innerHTML='<div class="products_price" id="129"><p>NT129</p></div>';
             products_title[0].innerText=`產品內頁：歐洲Barwa奢華SPA白麝香香氛皂`;
             products_title[1].innerText="歐洲Barwa奢華SPA白麝香香氛皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>波蘭原裝進口</p>
@@ -137,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "Barwa_green_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/歐洲Barwa奢華SPA綠橄欖香氛皂.png')";
+            products_img.innerHTML='<div class="products_price" id="129"><p>NT129</p></div>';
             products_title[0].innerText=`產品內頁：歐洲Barwa奢華SPA綠橄欖香氛皂`;
             products_title[1].innerText="歐洲Barwa奢華SPA綠橄欖香氛皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>波蘭原裝進口</p>
@@ -146,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "Barwa_snow_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/歐洲Barwa奢華SPA雪松香氛皂.png')";
+            products_img.innerHTML='<div class="products_price" id="129"><p>NT129</p></div>';
             products_title[0].innerText=`產品內頁：歐洲Barwa奢華SPA雪松香氛皂`;
             products_title[1].innerText="歐洲Barwa奢華SPA雪松香氛皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>波蘭原裝進口</p>
@@ -155,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "Barwa_black_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/歐洲Barwa奢華SPA黑蘭花香氛皂.png')";
+            products_img.innerHTML='<div class="products_price" id="129"><p>NT129</p></div>';
             products_title[0].innerText=`產品內頁：歐洲Barwa奢華SPA黑蘭花香氛皂`;
             products_title[1].innerText="歐洲Barwa奢華SPA黑蘭花香氛皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>波蘭原裝進口</p>
@@ -164,6 +176,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "Barwa_nature_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/歐洲Barwa高效舒敏天然皂.png')";
+            products_img.innerHTML='<div class="products_price" id="99"><p>NT99</p></div>';
             products_title[0].innerText=`產品內頁：歐洲Barwa高效舒敏天然皂`;
             products_title[1].innerText="歐洲Barwa高效舒敏天然皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>波蘭原裝進口</p>
@@ -173,6 +186,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "Chamomile_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/洋甘菊肥皂.png')";
+            products_img.innerHTML='<div class="products_price" id="59"><p>NT59</p></div>';
             products_title[0].innerText=`產品內頁：洋甘菊肥皂`;
             products_title[1].innerText="洋甘菊肥皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>波蘭原裝進口</p>
@@ -182,6 +196,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "green_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/綠橄欖肥皂.png')";
+            products_img.innerHTML='<div class="products_price" id="49"><p>NT49</p></div>';
             products_title[0].innerText=`產品內頁：綠橄欖肥皂`;
             products_title[1].innerText="綠橄欖肥皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>波蘭原裝進口</p>
@@ -191,6 +206,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "Florinda_love_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/義大利Florinda寵愛芍藥香氛植皂.png')";
+            products_img.innerHTML='<div class="products_price" id="299"><p>NT299</p></div>';
             products_title[0].innerText=`產品內頁：義大利Florinda寵愛芍藥香氛植皂`;
             products_title[1].innerText="義大利Florinda寵愛芍藥香氛植皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>義大利原裝進口</p>
@@ -200,6 +216,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "Florinda_sweet_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/義大利Florinda沁甜杏花香氛植皂.png')";
+            products_img.innerHTML='<div class="products_price" id="299"><p>NT299</p></div>';
             products_title[0].innerText=`產品內頁：義大利Florinda沁甜杏花香氛植皂`;
             products_title[1].innerText="義大利Florinda沁甜杏花香氛植皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>義大利原裝進口</p>
@@ -209,6 +226,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "Florinda_comfortable_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/義大利Florinda薰衣草舒眠香氛植皂.png')";
+            products_img.innerHTML='<div class="products_price" id="299"><p>NT299</p></div>';
             products_title[0].innerText=`產品內頁：義大利Florinda薰衣草舒眠香氛植皂`;
             products_title[1].innerText="義大利Florinda薰衣草舒眠香氛植皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>義大利原裝進口</p>
@@ -218,6 +236,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "Florinda_aroma_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/義大利Florinda金雀花優雅香氛植皂.png')";
+            products_img.innerHTML='<div class="products_price" id="299"><p>NT299</p></div>';
             products_title[0].innerText=`產品內頁：義大利Florinda金雀花優雅香氛植皂`;
             products_title[1].innerText="義大利Florinda金雀花優雅香氛植皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>義大利原裝進口</p>
@@ -227,6 +246,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "Florinda_plant_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/義大利Florinda雅痞風荳蔻植萃皂.png')";
+            products_img.innerHTML='<div class="products_price" id="149"><p>NT149</p></div>';
             products_title[0].innerText=`產品內頁：義大利Florinda雅痞風荳蔻植萃皂`;
             products_title[1].innerText="義大利Florinda雅痞風荳蔻植萃皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>義大利原裝進口</p>
@@ -236,6 +256,7 @@ document.addEventListener("DOMContentLoaded", function(){
             break;
         case "bee_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/蜂王艾草山藥肥皂.png')";
+            products_img.innerHTML='<div class="products_price" id="49"><p>NT49</p></div>';
             products_title[0].innerText=`產品內頁：蜂王艾草山藥肥皂`;
             products_title[1].innerText="蜂王艾草山藥肥皂";
             products_interview_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>台灣本土產品</p>
@@ -249,3 +270,31 @@ document.addEventListener("DOMContentLoaded", function(){
 function alink(id){
     localStorage.setItem("products_id", id);
 }
+
+// 點擊放入購物車
+products_buy_button.addEventListener("click", function(){
+    let is_repeat=false;
+    let cart_all=[];
+    let cart_item={
+        products_count:Number(products_count_select_card.value),
+        products_price:products_price.id,
+        products_name:localStorage.getItem("products_id")
+    }
+    if(!localStorage.getItem("cart_content")){
+        cart_all.push(cart_item);
+        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+    }
+    else{
+        cart_all=JSON.parse(localStorage.getItem("cart_content"));
+        for(let i=0; i<cart_all.length; i=i+1){
+            if(cart_all[i].products_name===cart_item.products_name){
+                cart_all[i].products_count=cart_all[i].products_count+cart_item.products_count;
+                is_repeat=true;
+            }
+        }
+        if(!is_repeat){
+            cart_all.push(cart_item);
+        }
+        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+    }
+})

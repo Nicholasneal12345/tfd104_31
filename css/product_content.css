@@ -8,7 +8,7 @@ div.products_img{
     background-size: 600px 400px;
     border: 5px solid #d09661;
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 50px auto;
     box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -20,6 +20,19 @@ div.products_img_hover{
 div.products_img_mousemove{
     background-size: 1800px 1200px;
     background-position: calc(var(--x) * 100%) calc(var(--y) * 100%);
+}
+
+div.products_img>div.produncts_price{
+    background-color: #F1E3A7;
+    width: 100px;
+    text-align: center;
+    border-radius: 0 0 10px;
+}
+
+div.products_img>div.produncts_price>p{
+    margin: 0;
+    padding: 5px 0;
+    color: #d09661;
 }
 
 /* 商品介紹內容及地址 */
