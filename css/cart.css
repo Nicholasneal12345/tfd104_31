@@ -79,9 +79,15 @@ div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card{
     margin: 50px 0;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
-div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card>img{
+div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card>div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card>div>img{
     width: 150px;
     height: 150px;
     flex: 1;
@@ -89,7 +95,7 @@ div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card>img{
     margin-bottom: 20px;
 }
 
-div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card>div.cart_buy_products_content{
+div.cart_buy_products_content_and_detail>div.cart_buy_products_content_card>div>div.cart_buy_products_content{
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -118,6 +124,10 @@ div.cart_buy_products_content_count_and_remove>button.remove:hover{
 
 div.cart_buy_products_content>div.cart_buy_products_content_price{
     flex: 1;
+}
+
+div.products_count_select{
+    outline: none;
 }
 
 /* 明細表 */

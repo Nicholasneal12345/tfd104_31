@@ -69,6 +69,11 @@ div.products_buy_button{
     flex: 1;
 }
 
+div.products_buy_button>a{
+    text-decoration: none;
+    color: #d09661;
+}
+
 select.products_count_select_card{
     width: 50px;
     outline: none;
@@ -92,7 +97,6 @@ div.products_buy_button{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -210px 0;
-    color: #d09661;
     transition: all 1s;
 }
 
@@ -102,6 +106,9 @@ div.products_buy_button:hover{
 
 div.products_buy_button_hover{
     background-position: 0;
+}
+
+div.products_buy_button_hover>a.products_buy_button_a_hover{
     color: white;
 }
 
