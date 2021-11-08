@@ -37,6 +37,7 @@ window.addEventListener("load", function(){
 
             document.getElementsByClassName("products_count_select")[cart_all_index].addEventListener("change", function(){
                 document.getElementsByClassName("cart_buy_products_content_price_p")[cart_all_index].innerHTML=`價格：${document.getElementsByClassName("cart_buy_products_content_price_p")[cart_all_index].id*document.getElementsByClassName("products_count_select")[cart_all_index].value}`;
+                console.log(document.getElementsByClassName("cart_buy_products_content_price_p")[cart_all_index].innerHTML, document.getElementsByClassName("cart_buy_products_content_price_p")[cart_all_index].id, cart_all_index);
                 for(let i=0; i<cart_all.length; i=i+1){
                     if(i===cart_all_index){
                         let price=document.getElementsByClassName("products_count_select")[cart_all_index].value;
@@ -60,7 +61,6 @@ window.addEventListener("load", function(){
 
     if(cart_all){
         for(let i=0; i<cart_all.length; i=i+1){
-            console.log(cart_all[i].products_name);
             if (cart_all[i].products_name==="cow_soap"){
                 if(document.getElementsByClassName("have_not_chosen").length){
                     console.log(document.getElementsByClassName("have_not_chosen"));
@@ -87,13 +87,19 @@ window.addEventListener("load", function(){
                     </div>
                     `
                 )
-                    option_selected(cart_all[i].products_count.toString(), i);
-                    document.getElementsByClassName("remove_cow_soap")[0].addEventListener("click", function(){
-                        if(window.confirm("確定要刪除牛乳肥皂嗎？")){
-                            document.getElementsByClassName("cow_soap_in_cart")[0].remove();
-                        }
-                    });
-                }
+                // 傳入數量以及cart_all的index到option_selected function裡
+                option_selected(cart_all[i].products_count.toString(), i);
+
+                // 每個商品的個別移除按鈕
+                document.getElementsByClassName("remove_cow_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除牛乳肥皂嗎？")){
+                        document.getElementsByClassName("cow_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
             else if(cart_all[i].products_name==="medimix_soap"){
                 if(document.getElementsByClassName("have_not_chosen").length){
                     console.log(document.getElementsByClassName("have_not_chosen"));
@@ -124,6 +130,584 @@ window.addEventListener("load", function(){
                 document.getElementsByClassName("remove_medimix_soap")[0].addEventListener("click", function(){
                     if(window.confirm("確定要刪除medimix肥皂嗎？")){
                         document.getElementsByClassName("medimix_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="cream_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="cream_soap_in_cart">
+                        <img src="../image/商品圖片/乳霜肥皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">乳霜肥皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_cream_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="49">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_cream_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除乳霜肥皂嗎？")){
+                        document.getElementsByClassName("cream_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="baby_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="baby_soap_in_cart">
+                        <img src="../image/商品圖片/施巴嬰兒潔膚皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">施巴嬰兒潔膚皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_baby_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="180">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_baby_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除施巴嬰兒潔膚皂嗎？")){
+                        document.getElementsByClassName("baby_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="seba_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="seba_soap_in_cart">
+                        <img src="../image/商品圖片/施巴潔膚皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">施巴潔膚皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_seba_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="198">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_seba_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除施巴潔膚皂嗎？")){
+                        document.getElementsByClassName("seba_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="Barwa_white_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="Barwa_white_soap_in_cart">
+                        <img src="../image/商品圖片/歐洲Barwa奢華SPA白麝香香氛皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">歐洲Barwa奢華SPA白麝香香氛皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_Barwa_white_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="129">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_Barwa_white_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除歐洲Barwa奢華SPA白麝香香氛皂嗎？")){
+                        document.getElementsByClassName("Barwa_white_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="Barwa_green_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="Barwa_green_soap_in_cart">
+                        <img src="../image/商品圖片/歐洲Barwa奢華SPA綠橄欖香氛皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">歐洲Barwa奢華SPA綠橄欖香氛皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_Barwa_green_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="129">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_Barwa_green_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除歐洲Barwa奢華SPA綠橄欖香氛皂嗎？")){
+                        document.getElementsByClassName("Barwa_green_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="Barwa_snow_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="Barwa_snow_soap_in_cart">
+                        <img src="../image/商品圖片/歐洲Barwa奢華SPA雪松香氛皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">歐洲Barwa奢華SPA雪松香氛皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_Barwa_snow_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="129">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_Barwa_snow_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除歐洲Barwa奢華SPA雪松香氛皂嗎？")){
+                        document.getElementsByClassName("Barwa_snow_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="Barwa_black_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="Barwa_black_soap_in_cart">
+                        <img src="../image/商品圖片/歐洲Barwa奢華SPA黑蘭花香氛皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">歐洲Barwa奢華SPA黑蘭花香氛皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_Barwa_black_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="129">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_Barwa_black_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除歐洲Barwa奢華SPA黑蘭花香氛皂嗎？")){
+                        document.getElementsByClassName("Barwa_black_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="Barwa_nature_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="Barwa_nature_soap_in_cart">
+                        <img src="../image/商品圖片/歐洲Barwa高效舒敏天然皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">歐洲Barwa高效舒敏天然皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_Barwa_nature_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="99">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_Barwa_nature_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除歐洲Barwa高效舒敏天然皂嗎？")){
+                        document.getElementsByClassName("Barwa_nature_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="Chamomile_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="Chamomile_soap_in_cart">
+                        <img src="../image/商品圖片/洋甘菊肥皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">洋甘菊肥皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_Chamomile_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="59">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_Chamomile_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除洋甘菊肥皂嗎？")){
+                        document.getElementsByClassName("Chamomile_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="green_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="green_soap_in_cart">
+                        <img src="../image/商品圖片/綠橄欖肥皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">綠橄欖肥皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_green_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="49">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_green_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除綠橄欖肥皂嗎？")){
+                        document.getElementsByClassName("green_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="Florinda_love_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="Florinda_love_soap_in_cart">
+                        <img src="../image/商品圖片/義大利Florinda寵愛芍藥香氛植皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">義大利Florinda寵愛芍藥香氛植皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_Florinda_love_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="299">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_Florinda_love_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除義大利Florinda寵愛芍藥香氛植皂嗎？")){
+                        document.getElementsByClassName("Florinda_love_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="Florinda_sweet_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="Florinda_sweet_soap_in_cart">
+                        <img src="../image/商品圖片/義大利Florinda沁甜杏花香氛植皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">義大利Florinda沁甜杏花香氛植皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_Florinda_sweet_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="299">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_Florinda_sweet_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除義大利Florinda沁甜杏花香氛植皂嗎？")){
+                        document.getElementsByClassName("Florinda_sweet_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="Florinda_comfortable_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="Florinda_comfortable_soap_in_cart">
+                        <img src="../image/商品圖片/義大利Florinda薰衣草舒眠香氛植皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">義大利Florinda薰衣草舒眠香氛植皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_Florinda_comfortable_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="299">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_Florinda_comfortable_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除義大利Florinda薰衣草舒眠香氛植皂嗎？")){
+                        document.getElementsByClassName("Florinda_comfortable_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="Florinda_aroma_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="Florinda_aroma_soap_in_cart">
+                        <img src="../image/商品圖片/義大利Florinda金雀花優雅香氛植皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">義大利Florinda金雀花優雅香氛植皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_Florinda_aroma_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="299">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_Florinda_aroma_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除義大利Florinda金雀花優雅香氛植皂嗎？")){
+                        document.getElementsByClassName("Florinda_aroma_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="Florinda_plant_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="Florinda_plant_soap_in_cart">
+                        <img src="../image/商品圖片/義大利Florinda雅痞風荳蔻植萃皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">義大利Florinda雅痞風荳蔻植萃皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_Florinda_plant_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="149">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_Florinda_plant_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除義大利Florinda雅痞風荳蔻植萃皂嗎？")){
+                        document.getElementsByClassName("Florinda_plant_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
+                    }
+                });
+            }
+
+            else if(cart_all[i].products_name==="bee_soap"){
+                if(document.getElementsByClassName("have_not_chosen").length){
+                    console.log(document.getElementsByClassName("have_not_chosen"));
+                    cart_buy_products_content_card.children[0].remove();
+                }
+                cart_buy_products_content_card.insertAdjacentHTML("beforeend", 
+                    `<div class="bee_soap_in_cart">
+                        <img src="../image/商品圖片/蜂王艾草山藥肥皂.png">
+                        <div class="cart_buy_products_content">
+                            <p style="color: #d09661; font-size: 18px; font-weight: bold; margin: 0 0 0 5px;">蜂王艾草山藥肥皂</p>
+                            <div class="cart_buy_products_content_count_and_remove">
+                                <p style="margin-left: 5px; display: inline-block; color: #d09661;">數量：</p>
+                                <select style="color: #d09661;" class="products_count_select">
+                                    <option vlaue="1" class="products_count_option">1</option>
+                                    <option vlaue="2" class="products_count_option">2</option>
+                                    <option vlaue="3" class="products_count_option">3</option>
+                                </select>
+                                <button class="remove remove_bee_soap">移除</button>
+                            </div>
+                            <div class="cart_buy_products_content_price">
+                                <p class="cart_buy_products_content_price_p" style="margin-left: 5px; color: #d09661;" id="49">價格：${cart_all[i].products_price*cart_all[i].products_count}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+                option_selected(cart_all[i].products_count.toString(), i);
+                document.getElementsByClassName("remove_bee_soap")[0].addEventListener("click", function(){
+                    if(window.confirm("確定要刪除蜂王艾草山藥肥皂嗎？")){
+                        document.getElementsByClassName("bee_soap_in_cart")[0].remove();
+                        cart_all.splice(i, 1);
+                        localStorage.setItem("cart_content", JSON.stringify(cart_all));
                     }
                 });
             }

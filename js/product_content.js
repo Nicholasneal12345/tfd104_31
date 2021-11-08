@@ -15,8 +15,7 @@ let products_interview_content=document.getElementsByClassName("products_intervi
 let products_adress_content=document.getElementsByClassName("products_adress_content")[0];
 let more_products_card=document.getElementsByClassName("more_products_card")[0];
 // 點擊放入購物車
-let products_price=document.getElementsByClassName("products_price");//為什麼這裡如果打products_price=document.getElementsByClassName("products_price")[0]的話，永遠就指向cow_soap的class為products_price的節點？
-
+let products_price=document.getElementsByClassName("products_price");
 
 
 
@@ -275,7 +274,7 @@ function alink(id){
 }
 
 // 點擊放入購物車
-products_buy_button.addEventListener("click", function(){
+products_buy_button.addEventListener("click", function(event){
     let is_repeat=false;
     let cart_all=[];
     let cart_item={
@@ -299,5 +298,8 @@ products_buy_button.addEventListener("click", function(){
             cart_all.push(cart_item);
         }
         localStorage.setItem("cart_content", JSON.stringify(cart_all));
+    }
+    if(window.confirm("繼續購物")){
+        event.preventDefault();
     }
 })
