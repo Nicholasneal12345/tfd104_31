@@ -166,3 +166,21 @@ div.cart_buy_products_detail_total_item{
     color: #d09661;
     font-size: 12px;
 }
+
+/* 繼續購物 */
+div.go_back_to_goods_category_all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    margin: auto;
+    border: 3px solid #d09661;
+    border-radius: 10px;
+    background-color: #F1E3A7;
+}
+
+div.go_back_to_goods_category_all>a{
+    text-decoration: none;
+    color: #d09661;
+}

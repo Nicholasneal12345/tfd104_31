@@ -134,11 +134,11 @@ ul.ul_fixed>li>a{
     color: #d09661;
     transition: color 2s;
 }
+
 ul>li>a.header_li_a_clicked{
     color: #d09661;
     text-decoration: underline #d09661;
 }
-
 
 /* hambuger_list */
 div.hambuger_list{
