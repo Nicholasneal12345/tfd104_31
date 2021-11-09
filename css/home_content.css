@@ -446,3 +446,72 @@ div.Operation_process_chat_box_card>div>div{
     border-style: solid;
     left: -20px;
 }
+
+/* home的media_screen */
+@media screen and (max-width:1117px) and (min-width:1017px){
+    div.Recommended_products>div.Recommended_products_item{
+        width: 300px;
+    }
+
+    div.appointment_store_card>a>div.appointment,
+    div.appointment_store_card>div.store{
+        width: 350px;
+    }
+
+    div.about_card{
+        width: 450px;
+        height: 450px;
+    }
+
+    div.about_card>div.about_content>button.about_content_button{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:1016.98px) {
+    div.Recommended_products{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.Recommended_products>div.Recommended_products_item{
+        width: 300px;
+        margin-bottom: 50px;
+    }
+
+    div.appointment_store_card{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.appointment_store_card>a>div.appointment,
+    div.appointment_store_card>div.store{
+        width: 300px;
+        margin-bottom: 50px;
+    }
+
+    div.appointment_store_card_title{
+        justify-content: center;
+    }
+
+    div.appointment_store_card_title>h1:nth-child(2){
+        display: none;
+    }
+
+    div.appointment_store_card_title>h1:nth-child(1):after{
+        content: "&實體地址";
+    }
+
+    div.about_card{
+        width: 300px;
+        height: 300px;
+    }
+
+    div.about_card>div.about_content>button.about_content_button{
+        margin-top: 30px;
+    }
+
+    div.about_card>div.about_content>h1{
+        margin-top: 10px;
+    }
+}
