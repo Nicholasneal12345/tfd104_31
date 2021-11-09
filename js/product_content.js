@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log(products_id);
     switch(products_id){
         case "cow_soap":
+            console.log(1);
             products_img.style.backgroundImage="url('../image/商品圖片/cow肥皂.png')";
             products_img.innerHTML='<div class="products_price" id="45"><p>NT45</p></div>';
             products_title[0].innerText=`產品內頁：cow_牛乳肥皂`;
@@ -95,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function(){
                                                   <p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>含牛乳成份</p>
                                                   <p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>細微顆粒溫和去除角質</p>`;
             products_adress_content.innerHTML=`<p style="text-align: start; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 16px; height: 16px;"></span>產地：日本<span class="iconify" data-icon="twemoji:flag-for-flag-japan" style="color: #777; width: 16px; height: 16px; margin-left: 5px;"></span></p>`;
+            console.log(2);
             break;
         case "medimix_soap":
             products_img.style.backgroundImage="url('../image/商品圖片/medimix肥皂.png')";

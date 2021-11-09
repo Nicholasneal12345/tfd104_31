@@ -1,6 +1,7 @@
 
 // 購買按鈕特效
 let Recommended_products_button=document.getElementsByClassName("Recommended_products_button");
+// let index_to_products_content=document.getElementsByClassName("index_to_products_content");
 // 最新消息
 let latest_new_item=document.getElementsByClassName("latest_new_item");
 let latest_new_date=document.getElementsByClassName("latest_new_date");
@@ -8,17 +9,14 @@ let latest_new_content=document.getElementsByClassName("latest_new_content");
 // 前往察看按鈕特效
 let about_content_button=document.getElementsByClassName("about_content_button")[0];
 // 操作流程
-let Operation_process_circle_circle1=document.getElementsByClassName("Operation_process_circle_circle1")[0];
-let Operation_process_circle_circle2=document.getElementsByClassName("Operation_process_circle_circle2")[0];
-let Operation_process_circle_circle3=document.getElementsByClassName("Operation_process_circle_circle3")[0];
-let Operation_process_chat_box_chat1=document.getElementsByClassName("Operation_process_chat_box_chat1")[0];
-let Operation_process_chat_box_chat2=document.getElementsByClassName("Operation_process_chat_box_chat2")[0];
-let Operation_process_chat_box_chat3=document.getElementsByClassName("Operation_process_chat_box_chat3")[0];
+let Operation_process_chat_box_chat=document.getElementsByClassName("Operation_process_chat_box_chat");
+let Operation_process_card=document.getElementsByClassName("Operation_process_card")[0];
+let Operation_process_title_line_line=document.getElementsByClassName("Operation_process_title_line_line")[0];
+console.log(window.innerWidth);
+console.log(window.outerWidth);
 
 
-
-
-// 購買按鈕特效
+// 購買按鈕特效以及購買功能
 for(let i=0; i<Recommended_products_button.length; i=i+1){
     Recommended_products_button[i].addEventListener("mouseenter", ()=>{
         Recommended_products_button[i].classList.add("Recommended_products_button_hover");
@@ -26,6 +24,13 @@ for(let i=0; i<Recommended_products_button.length; i=i+1){
     Recommended_products_button[i].addEventListener("mouseleave", ()=>{
         Recommended_products_button[i].classList.remove("Recommended_products_button_hover");
     })
+}
+
+for(let i=0; i<Recommended_products_button.length; i=i+1){
+    Recommended_products_button[i].addEventListener("click", function(){
+        console.log(this.id);
+        localStorage.setItem("products_id", Recommended_products_button[i].id);
+    }, true)
 }
 
 // 最新消息
@@ -70,27 +75,17 @@ about_content_button.addEventListener("mouseleave", ()=>{
 })
 
 // 操作流程
-Operation_process_circle_circle1.addEventListener("mouseenter", ()=>{
-    Operation_process_chat_box_chat1.classList.add("Operation_process_chat_box_chat_open");
+window.addEventListener("scroll", function(){
+    if(window.scrollY>=Operation_process_card.offsetTop-100){
+        for(let i=0; i<Operation_process_chat_box_chat.length; i=i+1){
+            Operation_process_chat_box_chat[i].classList.add("Operation_process_chat_box_chat_open");
+        }
+        Operation_process_title_line_line.classList.add("Operation_process_title_line_line_down");
+    }
+    else{
+        for(let i=0; i<Operation_process_chat_box_chat.length; i=i+1){
+            Operation_process_chat_box_chat[i].classList.remove("Operation_process_chat_box_chat_open");
+        }
+        Operation_process_title_line_line.classList.remove("Operation_process_title_line_line_down");
+    }
 })
-
-Operation_process_circle_circle1.addEventListener("mouseleave", ()=>{
-    Operation_process_chat_box_chat1.classList.remove("Operation_process_chat_box_chat_open");
-})
-
-Operation_process_circle_circle2.addEventListener("mouseenter", ()=>{
-    Operation_process_chat_box_chat2.classList.add("Operation_process_chat_box_chat_open");
-})
-
-Operation_process_circle_circle2.addEventListener("mouseleave", ()=>{
-    Operation_process_chat_box_chat2.classList.remove("Operation_process_chat_box_chat_open");
-})
-
-Operation_process_circle_circle3.addEventListener("mouseenter", ()=>{
-    Operation_process_chat_box_chat3.classList.add("Operation_process_chat_box_chat_open");
-})
-
-Operation_process_circle_circle3.addEventListener("mouseleave", ()=>{
-    Operation_process_chat_box_chat3.classList.remove("Operation_process_chat_box_chat_open");
-})
-

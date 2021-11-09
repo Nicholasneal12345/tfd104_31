@@ -224,6 +224,7 @@ ul.slider_img_card{
     margin: 0;
     perspective: 250px;
     overflow: hidden;
+
 }
 
 ul.slider_img_card>li{
@@ -433,4 +434,14 @@ div.hamburger_content>ul>li>ul>li:hover{
 
 div.hamburger_content>ul>li>ul>li:hover>a{
     color: white;
+}
+
+/* header的media_screen */
+@media screen and (max-width:917px){
+    ul.left_ul{
+        display: none;
+    }
+    div.hambuger_list{
+        display: block;
+    }
 }

@@ -6,14 +6,12 @@ div.Recommended_products{
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 50px;
-    height: 393px;
-    overflow: hidden;
 }
 
 div.Recommended_products>div.Recommended_products_item{
     position: relative;
     display: inline-block;
-    border: 1px solid #d09661;
+    border: 3px solid #d09661;
     margin-top: 10px;
     width: 333px;
     height: 380px;
@@ -80,7 +78,7 @@ div.Recommended_products>div.Recommended_products_item>button.Recommended_produc
     border-radius: 5px;
     border: 1px solid #d09661;
     text-align: center;
-    color: #d09661;
+    padding: 0;
     margin-top: 20px;
     background-color: white;
     background-image: url("../image/按鈕特效背景圖/d09661色碼背景圖.png");
@@ -91,11 +89,20 @@ div.Recommended_products>div.Recommended_products_item>button.Recommended_produc
 
 div.Recommended_products>div.Recommended_products_item>button.Recommended_products_button_hover{
     cursor: pointer;
-    color: white;
     background-position: 0;
     animation-name: Recommended_products_button_hover;
     animation-duration: 1s;
     animation-timing-function: linear;
+}
+
+div.Recommended_products>div.Recommended_products_item>button.Recommended_products_button>a{
+    text-decoration: none;
+    color: #d09661;
+}
+
+div.Recommended_products>div.Recommended_products_item>button.Recommended_products_button_hover>a{
+    text-decoration: underline white;
+    color: white;
 }
 
 @keyframes Recommended_products_button_hover{
@@ -123,6 +130,7 @@ div.latest_new_card>div.latest_new_item{
     height: 333px;
     transition: 1s;
     background-size: cover;
+    background-position: 50%;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
@@ -138,26 +146,6 @@ div.latest_new_card>div.latest_new_item_open{
 
 div.latest_new_card>div.latest_new_item_closed{
     opacity: 0.5;
-}
-
-div.latest_new_card>div.latest_new_item:nth-child(1){
-    background-image: url("../image/消息圖片/pexels-anthony-shkraba-6187540.jpg");
-}
-
-div.latest_new_card>div.latest_new_item:nth-child(2){
-    background-image: url("../image/消息圖片/soap-bubble-1910494_1920.jpg");
-}
-
-div.latest_new_card>div.latest_new_item:nth-child(3){
-    background-image: url("../image/消息圖片/pexels-karolina-grabowska-4210314.jpg");
-}
-
-div.latest_new_card>div.latest_new_item:nth-child(4){
-    background-image: url("../image/消息圖片/pexels-karolina-grabowska-4210371.jpg");
-}
-
-div.latest_new_card>div.latest_new_item:nth-child(5){
-    background-image: url("../image/消息圖片/pexels-visual-stories-__-micheile-7032143.jpg");
 }
 
 div.latest_new_card>div.latest_new_item>p{
@@ -178,7 +166,7 @@ div.latest_new_card>div.latest_new_item>p:last-child{
 
 div.latest_new_card>div.latest_new_item>p.latest_new_date_dropdown{
     animation-name: latest_new_date_dropdown;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: ease-in;
     transform: translateY(0);
 }
@@ -194,7 +182,7 @@ div.latest_new_card>div.latest_new_item>p.latest_new_date_dropdown{
 
 div.latest_new_card>div.latest_new_item>p.latest_new_content_dropup{
     animation-name: latest_new_content_dropup;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: ease-in;
     transform: translateY(0);
 }
@@ -234,6 +222,8 @@ div.appointment_store_card>a>div.appointment{
     background-color: #FCFAE3;
     color: #d09661;
     overflow: hidden;
+    border: 3px solid #d09661;
+    border-radius: 10px;
 }
 
 div.appointment_store_card>a>div.appointment>img{
@@ -263,6 +253,8 @@ div.appointment_store_card>div.store{
     background-color: #FCFAE3;
     color: #d09661;
     overflow: hidden;
+    border: 3px solid #d09661;
+    border-radius: 10px;
 }
 
 div.appointment_store_card>div.store>img{
@@ -290,6 +282,8 @@ div.about_card{
     /* border: 1px solid #d09661; */
     margin: auto;
     overflow: hidden;
+    border: 3px solid #d09661;
+    border-radius: 10px;
 }
 
 div.about_card>div.about_content{
@@ -357,16 +351,17 @@ div.Operation_process_card{
     display: flex;
     width: 100%;
     margin-top: 200px;
+    overflow: hidden;
 }
 
 div.Operation_process_card>div{
     flex: 1;
 }
-
 div.Operation_process_card>div.Operation_process_title_line_card{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: relative;
 }
 
 div.Operation_process_title_line_text{
@@ -381,6 +376,14 @@ div.Operation_process_title_line_line{
     width: 3px;
     height: 550px;
     background-color: #d09661;
+    position: absolute;
+    top: -100%;
+    transition: top 1s;
+}
+
+div.Operation_process_title_line_line_down{
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 div.Operation_process_circle_card{
@@ -424,11 +427,11 @@ div.Operation_process_chat_box_card>div{
     color: #d09661;
     border-radius: 15px;
     left: 100%;
+    transition: left 1s;
 }
 
 div.Operation_process_chat_box_card>div.Operation_process_chat_box_chat_open{
     left: 10%;
-    transition: left 1s;
 }
 
 div.Operation_process_chat_box_card>div>div{

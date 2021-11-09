@@ -131,6 +131,11 @@ function push(products_category_id){
     content(products_category_id);
 }
 
+document.addEventListener("DOMContentLoaded", function(){
+    products_category_id=localStorage.getItem("products_category_id");
+    push(products_category_id);
+})
+
 face_left.addEventListener("click", function(){
     localStorage.setItem("products_category_id", this.id);
     products_category_id=localStorage.getItem("products_category_id");
