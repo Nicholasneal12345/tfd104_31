@@ -1,6 +1,6 @@
 
 // 處理點擊商品分類選項後的畫面變動
-let title=document.getElementsByClassName("title")[0];
+let goods_selection_title1=document.getElementsByClassName("goods_selection_title1")[0];
 let face_left=document.getElementById("face_left");
 let head_left=document.getElementById("head_left");
 let body_left=document.getElementById("body_left");
@@ -17,10 +17,17 @@ let product_preview_item_img=document.getElementsByClassName("product_preview_it
 let input_products_condition=document.getElementsByClassName("input_products_condition")[0];
 // 前往商品內頁
 let product_preview_item_content_button=document.getElementsByClassName("product_preview_item_content_button");
+// 按鈕點擊縮放商品篩選選單
+let list_button_card=document.getElementsByClassName("list_button_card")[0];
+let goods_selection_card=document.getElementsByClassName("goods_selection_card")[0];
 
 
 
-
+// 按鈕點擊縮放商品篩選選單
+list_button_card.addEventListener("click", function(){
+    list_button_card.classList.toggle("list_button_card_open");
+    goods_selection_card.classList.toggle("goods_selection_card_on");
+})
 // 處理點擊商品分類選項後的畫面變動
 let products_category_id=localStorage.getItem("products_category_id");
 let product_preview_item=document.getElementsByClassName("product_preview_item");
@@ -125,6 +132,7 @@ function content(products_category_id){
             }
         }
     }
+    // else if 
 }
 
 function push(products_category_id){
@@ -135,6 +143,10 @@ document.addEventListener("DOMContentLoaded", function(){
     products_category_id=localStorage.getItem("products_category_id");
     push(products_category_id);
 })
+
+goods_selection_title1.addEventListener("click", function(){
+    localStorage.setItem("products_category_id", "");
+}, true)
 
 face_left.addEventListener("click", function(){
     localStorage.setItem("products_category_id", this.id);

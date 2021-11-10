@@ -2,6 +2,7 @@
 <html>
     <head lang="zh-tw">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
         <title>商品分類</title>
         <link href="../css/login_and_register.css" rel="stylesheet">
         <link href="../css/banner_header.css" rel="stylesheet">
@@ -160,13 +161,17 @@
             <!-- 條件選擇功能 -->
             <h1 class="title" style="text-align: center; margin-top: 50px; color: #d09661;"><span class="iconify" data-icon="mdi:leaf" style="color: #1DB02B; width: 25px; height: 25px;"></span>全部商品</h1>
             <div class="products_condition_card">
-                <div class="products_condition_item_left"></div>
+                <div class="products_condition_item_left">
+                    <div class="list_button_card">
+                        <div class="list_button"></div>
+                    </div>
+                </div>
                 <div class="products_condition_item_right">
                     <label for="search_input">
                         <span class="iconify" data-icon="et:search" style="color: #d09661;
                         vertical-align: bottom;" data-height="50"></span>
+                        <input id="search_input" class="input_products_condition" type="text" placeholder="請輸入想要搜尋的肥皂...">
                     </label>
-                    <input id="search_input" class="input_products_condition" type="text" placeholder="請輸入想要搜尋的肥皂...">
                     <div>
                         <span class="iconify" data-icon="ant-design:arrow-down-outlined" style="color: #d09661;" data-height="32" data-flip="vertical"></span>
                         <span class="iconify" data-icon="ant-design:arrow-down-outlined" style="color: #d09661;" data-height="32"></span>
