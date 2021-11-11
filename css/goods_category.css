@@ -29,13 +29,14 @@ div.products_condition_card>div.products_condition_item_right>label>input{
 }
 
 div.products_condition_card>div.products_condition_item_right>div{
-    display: inline-block;
+    display: flex;
     text-align: left;
-    vertical-align: bottom;
+    align-items: flex-end;
 }
 
 div.products_condition_card>div.products_condition_item_right>div>P{
     text-align: left;
+    margin: 0;
 }
 
 /* goods_category_content_card */
@@ -99,7 +100,6 @@ div.product_preview_card{
     margin-bottom: 300px;
     background-color: rgba(241, 227, 167, 0.8);
     padding-top: 30px;
-    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -176,9 +176,9 @@ div.product_preview_card>div.product_preview_item>div.product_preview_item_conte
 div.products_condition_item_left>div.list_button_card{
     margin-left: 16px;
     width: 100px;
-    height: 100px;
+    height: 50px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     display: none;
 }
 

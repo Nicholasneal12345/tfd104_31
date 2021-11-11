@@ -472,7 +472,7 @@ div.Operation_process_chat_box_card>div>div{
     }
 }
 
-@media screen and (max-width: 1016.98px) and (min-width: 697px){
+@media screen and (max-width: 1016.98px) and (min-width: 847px){
     div.Recommended_products{
         flex-direction: column;
         align-items: center;
@@ -526,6 +526,91 @@ div.Operation_process_chat_box_card>div>div{
     div.Operation_process_chat_box_card>div.Operation_process_chat_box_chat{
         width: 280px;
         margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 846.98px) and (min-width: 697px){
+    div.Recommended_products{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.Recommended_products>div.Recommended_products_item{
+        width: 300px;
+        margin-bottom: 50px;
+    }
+
+    div.appointment_store_card{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.appointment_store_card>a>div.appointment,
+    div.appointment_store_card>div.store{
+        width: 300px;
+        margin-bottom: 50px;
+    }
+
+    div.appointment_store_card_title{
+        justify-content: center;
+    }
+
+    div.appointment_store_card_title>h1:nth-child(2){
+        display: none;
+    }
+
+    div.appointment_store_card_title>h1:nth-child(1):after{
+        content: "&實體地址";
+    }
+
+    div.about_card{
+        width: 300px;
+        height: 300px;
+    }
+
+    div.about_card>div.about_content>button.about_content_button{
+        margin-top: 30px;
+    }
+
+    div.about_card>div.about_content>h1{
+        margin-top: 10px;
+    }
+
+    div.Operation_process_card>div.Operation_process_title_line_card{
+        display: none;
+    }
+
+    div.Operation_process_circle_card{
+        display: none;
+    }
+
+    div.Operation_process_chat_box_card{
+        align-items: center;
+    }
+
+    div.Operation_process_chat_box_card>div.Operation_process_chat_box_chat{
+        width: 280px;
+        margin-bottom: 50px;
+    }
+
+    div.Operation_process_chat_box_card>div.Operation_process_chat_box_chat_open{
+        left: 0%;
+    }
+
+    div.Operation_process_chat_box_card>div.Operation_process_chat_box_chat_open>div{
+        transform: translate(-50%, 200%) rotate(-90deg);
+        bottom: 0%;
+        left: 50%;
+    }
+
+    div.Operation_process_chat_box_card>div.Operation_process_chat_box_chat_open:nth-child(3)>div{
+        display: none;
+    }
+
+    div.latest_new_card>div.latest_new_item{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
 
@@ -595,5 +680,21 @@ div.Operation_process_chat_box_card>div>div{
 
     div.Operation_process_chat_box_card>div.Operation_process_chat_box_chat_open{
         left: 0%;
+    }
+
+    div.Operation_process_chat_box_card>div.Operation_process_chat_box_chat_open>div{
+        transform: translate(-50%, 200%) rotate(-90deg);
+        bottom: 0%;
+        left: 50%;
+    }
+
+    div.Operation_process_chat_box_card>div.Operation_process_chat_box_chat_open:nth-child(3)>div{
+        display: none;
+    }
+
+    div.latest_new_card>div.latest_new_item{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
