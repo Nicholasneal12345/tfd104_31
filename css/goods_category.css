@@ -96,7 +96,7 @@ div.product_preview_card{
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-left: 10px;
+    padding: 0 20px;
     margin-bottom: 300px;
     background-color: rgba(241, 227, 167, 0.8);
     padding-top: 30px;

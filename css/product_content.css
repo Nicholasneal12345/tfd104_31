@@ -115,25 +115,50 @@ div.products_buy_button_hover>a.products_buy_button_a_hover{
 /* 更多商品 */
 div.more_products_card{
     position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 315px;
-    overflow: hidden;
+    overflow: auto;
+}
+
+div.more_products_card::-webkit-scrollbar-button{
+    display: none;
+}
+
+div.more_products_card::-webkit-scrollbar {
+    background-color: rgba(241, 227, 167, 0.349);
+}
+
+div.more_products_card::-webkit-scrollbar-thumb{
+    background-color: #d09661;
+    border-radius: 10px;
+}
+
+div.more_products_card>a{
+    /* flex: 1; */
+    width: calc(100% / 4);
+    height: calc(100% - 6px);
+    margin-bottom: 50px;
 }
 
 div.more_products_card>a>div{
-    position: absolute;
-    width: 24%;
-    height: 100%;
+    /* position: absolute; */
+    /* width: calc((100% - 100px) / 4); */
+    border: 3px solid #d09661;
+    height: calc(100% - 6px);
     box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2);
     background-repeat: no-repeat;
     background-size: cover;
-    animation-name: more_products_item;
+    /* animation-name: more_products_item; */
     animation-duration: 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
-div.more_products_card:hover>a>div{
+/* div.more_products_card:hover>a>div{
     animation-play-state: paused;
 }
 
@@ -209,4 +234,4 @@ div.more_products_card>a>div.more_products_item7{
 div.more_products_card>a>div.more_products_item8{
     top: 0;
     left: 2205px;
-}
+} */
