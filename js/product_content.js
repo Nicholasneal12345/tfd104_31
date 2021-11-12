@@ -305,3 +305,17 @@ products_buy_button.addEventListener("click", function(event){
         event.preventDefault();
     }
 })
+
+// 聚焦商品數量選擇時跟失焦商品數量選擇時的placeholder設定
+products_count_input.addEventListener("focus", function(event){
+    event.target.placeholder="";
+})
+
+products_count_input.addEventListener("blur", function(event){
+    if(event.value){
+        event.target.placeholder=event.target.value;
+    }
+    else{
+        event.target.placeholder="1";
+    }
+})
