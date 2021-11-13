@@ -1,6 +1,6 @@
 
 /* 關於 */
-div.about_card{
+/* div.about_card{
     position: relative;
     width: 100%;
     height: 1000px;
@@ -113,4 +113,98 @@ div.about_card>div.about_item7_enlarge{
 
 div.about_card>div.about_item7:hover{
     cursor: pointer;
+} */
+div.about_card{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+div.about_card>div{
+    display: flex;
+    flex: 1;
+    padding: 20px 0;
+    position: relative;
+}
+
+div.about_card>div>div:nth-child(1){
+    flex: 1;
+    border-bottom: 3px solid #d09661;
+    color: #d09661;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+div.about_card>div>div:nth-child(1):hover{
+    cursor: pointer;
+}
+
+div.about_card>div:nth-child(1)>div:nth-child(1):hover::before{
+    content: "網站名稱";
+    width: 200px;
+    border-radius: 10px;
+    background-color: #F1E3A7;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-100%);
+}
+
+div.about_card>div:nth-child(2)>div:nth-child(1):hover::before{
+    content: "網站類型";
+    width: 200px;
+    border-radius: 10px;
+    background-color: #F1E3A7;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-100%);
+}
+
+div.about_card>div:nth-child(3)>div:nth-child(1):hover::before{
+    content: "網站成立時間";
+    width: 200px;
+    border-radius: 10px;
+    background-color: #F1E3A7;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-100%);
+}
+
+div.about_card>div:nth-child(4)>div:nth-child(1):hover::before{
+    content: "成立地點";
+    width: 200px;
+    border-radius: 10px;
+    background-color: #F1E3A7;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-100%);
+}
+
+div.about_card>div:nth-child(5)>div:nth-child(1):hover::before{
+    content: "網站內容";
+    width: 200px;
+    border-radius: 10px;
+    background-color: #F1E3A7;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-100%);
+}
+
+div.about_card>div:nth-child(6)>div:nth-child(1):hover::before{
+    content: "使用到的技術";
+    width: 200px;
+    border-radius: 10px;
+    background-color: #F1E3A7;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-100%);
+}
+
+div.about_card>div>div:nth-child(2){
+    flex: 5;
+    margin-left: 20px;
+    border-bottom: 1px solid #d09661;
+    color: #d09661;
 }

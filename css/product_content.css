@@ -90,21 +90,6 @@ input.products_count_input{
     outline: none;
     color: #d09661;
 }
-::-webkit-input-placeholder {
-    color:red;
-}
-
-::-moz-placeholder {
-    color:red;
-}
-
-::-ms-placeholder {
-    color:red;
-}
-
-::placeholder {
-    color:red;
-}
 
 input.products_count_input::placeholder{
     color: #d09661;
