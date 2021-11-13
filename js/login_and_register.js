@@ -7,10 +7,28 @@ let login_and_register_content_item=document.getElementsByClassName("login_and_r
 let login_li=document.getElementsByClassName("login_li")[0];
 let all_div=document.getElementsByClassName("all_div")[0];
 let login_and_register_card=document.getElementsByClassName("login_and_register_card")[0];
+// 密碼隱藏開關
+let show_password=document.getElementsByClassName("show_password")[0];
+let hide_password=document.getElementsByClassName("hide_password")[0];
+let password_confirm=document.getElementsByClassName("password_confirm")[0];
 
 
 
 
+// 密碼隱藏開關
+show_password.addEventListener("click", function(){
+    console.log("click show")
+    this.style.display="none";
+    hide_password.style.display="block";
+    password_confirm.setAttribute("type", "password");
+})
+
+hide_password.addEventListener("click", function(){
+    console.log("click hide")
+    this.style.display="none";
+    show_password.style.display="block";
+    password_confirm.setAttribute("type", "text");
+})
 login_and_register_card.addEventListener("click", ()=>{
     all_div.classList.add("all_div_closed");
     login_and_register_card.classList.add("login_and_register_card_open");  //因為改變document的事件處理器的觸發機制，所以在這邊要重新加回去 

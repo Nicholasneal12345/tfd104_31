@@ -18,16 +18,15 @@ let input_products_condition=document.getElementsByClassName("input_products_con
 // 前往商品內頁
 let product_preview_item_content_button=document.getElementsByClassName("product_preview_item_content_button");
 // 按鈕點擊縮放商品篩選選單
-let list_button_card=document.getElementsByClassName("list_button_card")[0];
+// let list_button_card=document.getElementsByClassName("list_button_card")[0];
 let goods_selection_card=document.getElementsByClassName("goods_selection_card")[0];
 
 
-
 // 按鈕點擊縮放商品篩選選單
-list_button_card.addEventListener("click", function(){
-    list_button_card.classList.toggle("list_button_card_open");
-    goods_selection_card.classList.toggle("goods_selection_card_on");
-})
+// list_button_card.addEventListener("click", function(){
+//     list_button_card.classList.toggle("list_button_card_open");
+//     goods_selection_card.classList.toggle("goods_selection_card_on");
+// })
 // 處理點擊商品分類選項後的畫面變動
 let products_category_id=localStorage.getItem("products_category_id");
 let product_preview_item=document.getElementsByClassName("product_preview_item");

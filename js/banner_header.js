@@ -56,8 +56,9 @@ for(let i=0; i<header_li_a.length; i=i+1){
 }
 
 for(let i=0; i<all_products_categort_button.length; i=i+1){
-    all_products_categort_button[i].addEventListener("click", function(){
+    all_products_categort_button[i].addEventListener("click", function(event){
         localStorage.setItem("products_category_id", this.id);
+        // event.stopImmediatePropagation();
     }, true)
 }
 

@@ -103,3 +103,9 @@ div.login_and_register_card>div.login_and_register_content_card>div.register_con
     opacity: 0;
     transform: translateX(100%);
 }
+
+/* 密碼隱藏開關 */
+div.show_password:hover
+,div.hide_password:hover{
+    cursor: pointer;
+}
