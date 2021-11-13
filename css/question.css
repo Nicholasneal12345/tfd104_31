@@ -1,16 +1,28 @@
+body{
+    overflow-x: hidden;
+}
+
 div.question_chat_card{
     display: flex;
     flex-direction: column;
     /* height: 800px; */
-    margin-top: 200px;
+    width: 80vw;
+    margin: 50px auto;
 }
 
 div.question_chat_card>div.question_chat_item{
     flex: 1;
     display: flex;
-    justify-content: center;
     align-items: center;
     margin: 20px 0;
+}
+
+div.question_chat_card>div.question_chat_item:nth-child(n){
+    justify-content: flex-start;
+}
+
+div.question_chat_card>div.question_chat_item:nth-child(2n){
+    justify-content: flex-end;
 }
 
 div.question_chat_card>div.question_chat_item>img{
@@ -20,22 +32,37 @@ div.question_chat_card>div.question_chat_item>img{
 
 
 div.question_chat_card>div.question_chat_item>div{
-    position: relative;
+    position: absolute;
     width: 500px;
     height: 150px;
     background-color: #FCFAE3;
     vertical-align: middle;
     border-radius: 15px;
+    transition: all 1s;
 }
 
 div.question_chat_card>div.question_chat_item1>div
 ,div.question_chat_card>div.question_chat_item3>div{
     transform: translateX(20%);
+    right: -100%;
 }
 
 div.question_chat_card>div.question_chat_item2>div
 ,div.question_chat_card>div.question_chat_item4>div{
     transform: translateX(-20%);
+    left: -100%;
+}
+
+div.question_chat_card>div.question_chat_item1>div.open
+,div.question_chat_card>div.question_chat_item3>div.open{
+    right: 0;
+    transform: translateX(-50%);
+}
+
+div.question_chat_card>div.question_chat_item2>div.open
+,div.question_chat_card>div.question_chat_item4>div.open{
+    left: 0;
+    transform: translateX(50%);
 }
 
 div.question_chat_card>div.question_chat_item1>div>div
@@ -62,6 +89,7 @@ div.question_chat_card>div.question_chat_item2>div>div
 
 div.question_chat_card>div.question_chat_item>div>p{
     text-align: center;
+    color: #d09661;
     margin: 0;
     line-height: 150px;
 }
@@ -71,7 +99,7 @@ form.more_question_card{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 500px;
+    width: 80vw;
     margin: auto;
     color: #d09661;
 }
@@ -125,4 +153,158 @@ form.more_question_card>input:hover{
     background-position: 0;
     cursor: pointer;
     transition: all 1s;
+}
+
+@media screen and (max-width: 1117px) and (min-width: 967px){
+    div.question_chat_card>div.question_chat_item>div.open{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 966.98px) and (min-width: 867px){
+    div.question_chat_card>div.question_chat_item>div.open{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 866.98px) and (min-width: 767px){
+    div.question_chat_card>div.question_chat_item>div.open{
+        width: 300px;
+    }
+
+    div.question_chat_card>div.question_chat_item>div.open>p{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+    }
+
+    div.question_chat_card>div.question_chat_item>div.open:nth-child(1):hover::before{
+        content: "下單後通常都是3到5天後送達您指定的門市";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        background-color: #FCFAE3;
+        color: #d09661;
+        z-index: 3;
+    }
+}
+
+@media screen and (max-width: 766.98px) and (min-width: 617px){
+    div.question_chat_card>div.question_chat_item>div.open{
+        width: 300px;
+    }
+
+    div.question_chat_card>div.question_chat_item1>div.open
+    ,div.question_chat_card>div.question_chat_item3>div.open{
+        right:10px;
+        transform: translateX(0);
+    }
+
+    div.question_chat_card>div.question_chat_item2>div.open
+    ,div.question_chat_card>div.question_chat_item4>div.open{
+        left: 10px;
+        transform: translateX(0);
+    }
+
+    div.question_chat_card>div.question_chat_item>div.open>p{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+    }
+
+    div.question_chat_card>div.question_chat_item>div.open:nth-child(1):hover::before{
+        content: "下單後通常都是3到5天後送達您指定的門市";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        background-color: #FCFAE3;
+        color: #d09661;
+        z-index: 3;
+    }
+
+    div.email_card>input{
+        width: 200px;
+    }
+
+    div.input_text_card>textarea{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 616.98px){
+    /* div.question_chat_card>div.question_chat_item{
+        flex-direction: column;
+    } */
+    div.question_chat_card>div.question_chat_item::after{
+        content: "";
+        height: 200px;
+        clear: both;
+    }
+
+    div.question_chat_card>div.question_chat_item>div{
+        width: 300px;
+    }
+
+    div.question_chat_card>div.question_chat_item>div.open{
+        width: 300px;
+    }
+
+    div.question_chat_card>div.question_chat_item>img{
+        display: none;
+    }
+
+    div.question_chat_card>div.question_chat_item1>div
+    ,div.question_chat_card>div.question_chat_item3>div{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    div.question_chat_card>div.question_chat_item2>div
+    ,div.question_chat_card>div.question_chat_item4>div{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    div.question_chat_card>div.question_chat_item1>div.open
+    ,div.question_chat_card>div.question_chat_item3>div.open{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    div.question_chat_card>div.question_chat_item2>div.open
+    ,div.question_chat_card>div.question_chat_item4>div.open{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    div.question_chat_card>div.question_chat_item>div.open>p{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+    }
+
+    div.question_chat_card>div.question_chat_item>div.open:nth-child(1):hover::before{
+        content: "下單後通常都是3到5天後送達您指定的門市";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        background-color: #FCFAE3;
+        color: #d09661;
+        z-index: 3;
+    }
+
+    div.email_card>input{
+        width: 100px;
+        margin-left: 15px;
+    }
+
+    div.input_text_card>textarea{
+        width: 80%;
+    }
 }
