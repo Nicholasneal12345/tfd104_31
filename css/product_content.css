@@ -88,6 +88,38 @@ input.products_count_input{
     padding: 3px;
     border: none;
     outline: none;
+    color: #d09661;
+}
+::-webkit-input-placeholder {
+    color:red;
+}
+
+::-moz-placeholder {
+    color:red;
+}
+
+::-ms-placeholder {
+    color:red;
+}
+
+::placeholder {
+    color:red;
+}
+
+input.products_count_input::placeholder{
+    color: #d09661;
+}
+
+input.products_count_input:-ms-placeholder{
+    color: #d09661;
+}
+
+input.products_count_input:-moz-placeholder{
+    color: #d09661;
+}
+
+input.products_count_input:-webkit-input-placeholder{
+    color: #d09661;
 }
 
 div.products_buy_button{
