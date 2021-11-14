@@ -36,8 +36,13 @@
                 <div class="login_and_register_content_item register_content_card">
                     <input type="email" placeholder="請輸入信箱...">
                     <input type="password" placeholder="請輸入密碼...">
-                    <input type="text" placeholder="請再輸入一次確認密碼...">
-                    <div></div>  <!-- 這裡做一個icon來設定是否隱藏確認密碼 -->
+                    <input class="password_confirm" type="password" placeholder="請再輸入一次確認密碼...">
+                    <div class="show_password" style="transform: translateY(-250%); position: absolute; right: 15%;">
+                        <span class="iconify" data-icon="bx:bx-show" style="color: #777;" data-height="16"></span>
+                    </div>
+                    <div class="hide_password" style="transform: translateY(-250%); position: absolute; right: 15%;">
+                        <span class="iconify" data-icon="bx:bx-hide" style="color: #777;" data-height="16"></span>
+                    </div>
                     <input type="button" value="登入">
                 </div>
             </div>

@@ -109,3 +109,15 @@ div.show_password:hover
 ,div.hide_password:hover{
     cursor: pointer;
 }
+
+@media screen and (max-width: 617px) and (min-width:417px){
+    div.login_and_register_card{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 416.98px) {
+    div.login_and_register_card{
+        width: 300px;
+    }
+}
