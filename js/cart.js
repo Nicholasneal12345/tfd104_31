@@ -120,7 +120,8 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
-                        
+                        cart_buy_products_detail_content.children[i].remove();
+
                         document.getElementsByClassName("cow_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
                         localStorage.setItem("cart_content", JSON.stringify(cart_all));
@@ -161,6 +162,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("medimix_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -202,6 +204,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("cream_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -243,6 +246,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("baby_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -284,6 +288,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("seba_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -325,6 +330,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("Barwa_white_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -366,6 +372,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("Barwa_green_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -407,6 +414,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("Barwa_snow_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -448,6 +456,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("Barwa_black_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -489,6 +498,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("Barwa_nature_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -530,6 +540,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("Chamomile_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -571,6 +582,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("green_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -612,6 +624,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("Florinda_love_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -653,6 +666,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("Florinda_sweet_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -694,6 +708,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("Florinda_comfortable_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -735,6 +750,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("Florinda_aroma_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -776,6 +792,7 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
+                        cart_buy_products_detail_content.children[i].remove();
 
                         document.getElementsByClassName("Florinda_plant_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
@@ -817,7 +834,8 @@ window.addEventListener("load", function () {
                         cart_buy_products_detail_total_item.innerHTML =
                         `<p>總和</p>
                         <p>NT${totalPrice}</p>`;
-                        
+                        cart_buy_products_detail_content.children[i].remove();
+
                         document.getElementsByClassName("bee_soap_in_cart")[0].remove();
                         cart_all.splice(i, 1);
                         localStorage.setItem("cart_content", JSON.stringify(cart_all));
