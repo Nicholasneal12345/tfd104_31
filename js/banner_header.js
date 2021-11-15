@@ -38,10 +38,54 @@ let slider_img_item=document.getElementsByClassName("slider_img_item");//圖片�
 let slider_img_bottom=document.getElementsByClassName("slider_img_bottom");//底下的按鈕，總共有4個
 let slider_img_next=document.getElementsByClassName("slider_img_next")[0];//右按鈕
 let slider_img_previous=document.getElementsByClassName("slider_img_previous")[0];//左按鈕
+// 游標滑到購物車圖案時會觸發的頁面
+let cart_hover_content=document.querySelector(".cart_hover_content");
+let cart_hover_content_title=document.querySelector(".cart_hover_content_title");
 
 
 
+// 游標滑到購物車圖案時會觸發的頁面
+window.addEventListener("load", function(){
 
+    let cartAll=JSON.parse(localStorage.getItem("cart_content"));
+    if(cartAll){
+        if(cart_hover_content.children[1]&&cart_hover_content.children[1].classList.contains("no_products")){
+            cart_hover_content.children[1].remove();
+        }
+        for(let i=0; i<cartAll.length; i=i+1){
+            let children;
+                children=document.createElement("div");
+                children.classList.add("cart_hover_content_item");
+            for(let j=0; j<3; j=j+1){
+                console.log(cart_hover_content.children[i], i);
+                if(j===0){
+                    let productsName=document.createElement("p");
+                    productsName.innerHTML=`${JSON.parse(localStorage.getItem("cart_content"))[i].products_name}`;
+                    children.append(productsName);
+                }
+                else if(j===1){
+                    let productsCount=document.createElement("p");
+                    productsCount.innerHTML=`${JSON.parse(localStorage.getItem("cart_content"))[i].products_count}`;
+                    children.append(productsCount);
+                }
+                else if(j===2){
+                    let productsPrice=document.createElement("p");
+                    productsPrice.innerHTML=`${JSON.parse(localStorage.getItem("cart_content"))[i].products_price*JSON.parse(localStorage.getItem("cart_content"))[i].products_count}`;
+                    children.append(productsPrice);
+                }
+            }
+            cart_hover_content.appendChild(children);
+        }
+    }
+    else{
+        let children;
+                children=document.createElement("div");
+                children.classList.add("cart_hover_content_item");
+                children.classList.add("no_products");
+                children.innerHTML=`目前還沒有商品`;
+                cart_hover_content.append(children);
+    }
+})
 // 處理header按過後的事件處理
 for(let i=0; i<header_li_a.length; i=i+1){
     header_li_a[i].addEventListener("click", ()=>{
