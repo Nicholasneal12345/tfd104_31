@@ -41,6 +41,10 @@ let slider_img_previous=document.getElementsByClassName("slider_img_previous")[0
 // 游標滑到購物車圖案時會觸發的頁面
 let cart_hover_content=document.querySelector(".cart_hover_content");
 let cart_hover_content_title=document.querySelector(".cart_hover_content_title");
+// 判斷購物車裡是否有商品並且更改icon顏色
+let shop_li=document.querySelector(".shop_li");
+
+
 
 
 
@@ -49,6 +53,7 @@ window.addEventListener("load", function(){
 
     let cartAll=JSON.parse(localStorage.getItem("cart_content"));
     if(cartAll){
+        shop_li.classList.add('-color')
         if(cart_hover_content.children[1]&&cart_hover_content.children[1].classList.contains("no_products")){
             cart_hover_content.children[1].remove();
         }
@@ -56,6 +61,7 @@ window.addEventListener("load", function(){
             let children;
                 children=document.createElement("div");
                 children.classList.add("cart_hover_content_item");
+
             for(let j=0; j<3; j=j+1){
                 console.log(cart_hover_content.children[i], i);
                 if(j===0){

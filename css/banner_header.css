@@ -117,7 +117,6 @@ ul.right_ul>li>a{
 }
 
 /* 游標滑到購物車圖案時會觸發的頁面 */
-
 ul.right_ul>li:last-child>a>div{
     position: absolute;
     bottom: 0;
