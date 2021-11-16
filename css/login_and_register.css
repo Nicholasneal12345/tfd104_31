@@ -82,6 +82,10 @@ div.login_and_register_card>div.login_and_register_content_card>div>input{
     color: #d09661;
 }
 
+div.login_and_register_card>div.login_and_register_content_card>div>input::placeholder{
+    color: #d09661;
+}
+
 div.login_and_register_card>div.login_and_register_content_card>div>input[type=button]{
     border: 1px solid #d09661;
     border-radius: 10px;
