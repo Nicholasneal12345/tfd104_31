@@ -307,4 +307,7 @@ form.more_question_card>input:hover{
     div.input_text_card>textarea{
         width: 80%;
     }
+    div.gender_card>input{
+        margin-right: 0;
+    }
 }
