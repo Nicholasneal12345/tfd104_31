@@ -24,3 +24,8 @@ window.addEventListener("scroll", function(){
         }
     }
 })
+
+// 載入網頁時自動下移500px
+window.addEventListener("load", function(){
+    window.scrollTo(0, 500);
+})

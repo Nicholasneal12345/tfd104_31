@@ -41,6 +41,9 @@ window.addEventListener("load", function () {
     let cart_all = JSON.parse(localStorage.getItem("cart_content"));
     let totalPrice = 0;
 
+    // 載入網頁時自動下移500px
+    window.scrollTo(0, 500);
+
     // 設定及修改每個商品的選單數量以及購物車明細條變動
     function option_selected(count, cart_all_index) {
         console.log(document.getElementsByClassName("products_count_select")[0]);

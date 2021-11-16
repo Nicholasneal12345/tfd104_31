@@ -319,3 +319,8 @@ products_count_input.addEventListener("blur", function(event){
         event.target.placeholder="1";
     }
 })
+
+// 載入網頁時自動下移500px
+window.addEventListener("load", function(){
+    window.scrollTo(0, 500);
+})

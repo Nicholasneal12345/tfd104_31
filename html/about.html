@@ -248,28 +248,13 @@
     </div>
     <script src="../js/login_and_register.js"></script>
     <script src="../js/banner_header.js"></script>
-    <!-- 因為這個頁面只有處理一個click事件，所以js直接寫在html裡 -->
-    <!-- <script>
-            ;(function(){
-            
-            // 點擊放大鏡icon後的動畫處理
-            let enlarge_and_reduce_button=document.getElementsByClassName("about_item7")[0];
-            let about_card=document.getElementsByClassName("about_card")[0];
-            let about_item=document.getElementsByClassName("about_item");
-
-
-
-
-            enlarge_and_reduce_button.addEventListener("click", ()=>{
-                about_card.classList.toggle("about_card_enlarge");
-                for(let i=0; i<7; i=i+1){
-                    about_item[i].classList.toggle(`about_item${i+1}_enlarge`);
-                    console.log(123)
-                }
+    <script>
+        ;(function(){
+            window.addEventListener("load", function(){
+                window.scrollTo(0, 500);
             })
-
-            })()
-        </script> -->
+        })();
+    </script>
     <script src="../js/footer.js"></script>
 </body>
 
