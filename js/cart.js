@@ -6,10 +6,21 @@ let cart_buy_products_detail_card = document.getElementsByClassName("cart_buy_pr
 //購物車明細條
 let cart_buy_products_detail_content = document.getElementsByClassName("cart_buy_products_detail_content")[0];
 let cart_buy_products_detail_total_item = document.getElementsByClassName("cart_buy_products_detail_total_item")[0];
+// 購物流程文字游標觸碰時顯示隱藏文字
+let buy_process_circle = document.getElementsByClassName("buy_process_circle");
 
 
 
 
+// 購物流程文字游標觸碰時顯示隱藏文字
+for(let i=0; i<buy_process_circle.length; i=i+1){
+    buy_process_circle[i].children[1].addEventListener("mouseenter", function(){
+        this.classList.add("text_show");
+    })
+    buy_process_circle[i].children[1].addEventListener("mouseleave", function(){
+        this.classList.remove("text_show");
+    })
+}
 // 購物車全部清空按鈕
 clear_cart.addEventListener("click", function () {
     if (window.confirm("確定要刪除購物車裡的所有商品？")) {
