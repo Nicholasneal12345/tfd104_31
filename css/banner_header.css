@@ -119,7 +119,7 @@ ul.right_ul>li>a{
 /* 游標滑到購物車圖案時會觸發的頁面 */
 ul.right_ul>li:last-child>a>div{
     position: absolute;
-    bottom: 0;
+    bottom: 30%;
     right: 0;
     width: 30vw;
     transform: translateY(100%);
@@ -143,10 +143,20 @@ ul.right_ul>li:last-child>a>div>div{
     display: flex;
     justify-content: space-around;
     border-bottom: 1px solid #F1E3A7;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 ul.right_ul>li:last-child>a>div>div>p{
     flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+ul.right_ul>li:last-child>a>div>div>p:hover{
+    overflow: visible;
+    text-overflow: unset;
 }
 
 ul.right_ul>li:last-child>a>div>div>p:nth-child(2){
@@ -476,6 +486,10 @@ div.hamburger_content>ul>li>ul>li:hover>a{
     div.hambuger_list{
         display: block;
     }
+
+    ul.right_ul>li:last-child>a>div{
+        width: 50vw;
+    }
 }
 
 @media screen and (max-width: 816.98px) and (min-width: 600px){
@@ -490,6 +504,10 @@ div.hamburger_content>ul>li>ul>li:hover>a{
     ul.slider_img_card>li>a>div>p{
         font-size: 24px;
     }
+
+    ul.right_ul>li:last-child>a>div{
+        width: 50vw;
+    }
 }
 
 @media screen and (max-width: 599.98px) {
@@ -503,5 +521,9 @@ div.hamburger_content>ul>li>ul>li:hover>a{
 
     ul.slider_img_card>li>a>div>p{
         font-size: 16px;
+    }
+
+    ul.right_ul>li:last-child>a>div{
+        width: 70vw;
     }
 }

@@ -12,8 +12,8 @@ let about_content_button=document.getElementsByClassName("about_content_button")
 let Operation_process_chat_box_chat=document.getElementsByClassName("Operation_process_chat_box_chat");
 let Operation_process_card=document.getElementsByClassName("Operation_process_card")[0];
 let Operation_process_title_line_line=document.getElementsByClassName("Operation_process_title_line_line")[0];
-console.log(window.innerWidth);
-console.log(window.outerWidth);
+
+
 
 
 // 購買按鈕特效以及購買功能

@@ -11,7 +11,6 @@ let buy_process_circle = document.getElementsByClassName("buy_process_circle");
 
 
 
-
 // 購物流程文字游標觸碰時顯示隱藏文字
 for(let i=0; i<buy_process_circle.length; i=i+1){
     buy_process_circle[i].children[1].addEventListener("mouseenter", function(){
